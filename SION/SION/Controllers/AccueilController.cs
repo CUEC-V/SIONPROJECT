@@ -32,7 +32,8 @@ namespace SION.Controllers
             }
             return _context.Accueils
                 .Include(t => t.MenuThematiques)
-                .Select(s => new AccueilVM { Accueil = s.Vm(), MenuThematique = s.MenuThematiques.Select(v => v.Vm()).ToList() }).ToList();
+                .Include(t => t.ReseauxSociauxes)
+                .Select(s => new AccueilVM { Accueil = s.Vm(), MenuThematique = s.MenuThematiques.Select(v => v.Vm()).ToList(), ReseauxSociaux = s.ReseauxSociauxes.Select(v => v.Vm()).ToList() }).ToList();
         }
 
         // GET: api/Accueil/5
@@ -45,6 +46,7 @@ namespace SION.Controllers
             }
             var accueil = await _context.Accueils
                 .Include(t => t.MenuThematiques)
+                .Include(t => t.ReseauxSociauxes)
                 .FirstOrDefaultAsync(a => a.Id == id);
 
             if (accueil == null)

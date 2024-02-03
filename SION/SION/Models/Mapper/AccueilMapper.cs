@@ -21,7 +21,17 @@ namespace SION.Models
                 TextBas = accueil.TextBas,
                 Image = accueil.Image,
                 TexteProphete = accueil.TexteProphete,
-                MenuThematiques = accueil.MenuThematiques?.ToList(),
+                NomEglise = accueil.NomEglise,
+                NumeroLibelleAdresse = accueil.NumeroLibelleAdresse,
+                CodePostaleVillePays = accueil.CodePostaleVillePays,
+                NumeroTelephone = accueil.NumeroTelephone,
+                PremierJourCulte = accueil.PremierJourCulte,
+                DeuxiemeJourCulte = accueil.DeuxiemeJourCulte,
+                TroisiemeJourCulte = accueil.TroisiemeJourCulte,
+                AutreJoureCulte = accueil.AutreJoureCulte,
+                ImageChandelier = accueil.ImageChandelier,
+                ReseauxSociauxes = accueil.ReseauxSociauxes.ToList(),
+                MenuThematiques = accueil.MenuThematiques.ToList(),
             };
         }
 
@@ -41,7 +51,16 @@ namespace SION.Models
                 Video = accueil.Video,
                 TextBas = accueil.TextBas,
                 Image = accueil.Image,
-                TexteProphete = accueil.TexteProphete
+                TexteProphete = accueil.TexteProphete,
+                NomEglise = accueil.NomEglise,
+                NumeroLibelleAdresse = accueil.NumeroLibelleAdresse,
+                CodePostaleVillePays = accueil.CodePostaleVillePays,
+                NumeroTelephone = accueil.NumeroTelephone,
+                PremierJourCulte = accueil.PremierJourCulte,
+                DeuxiemeJourCulte = accueil.DeuxiemeJourCulte,
+                TroisiemeJourCulte = accueil.TroisiemeJourCulte,
+                AutreJoureCulte = accueil.AutreJoureCulte,
+                ImageChandelier = accueil.ImageChandelier,
             };
         }
 
@@ -62,6 +81,16 @@ namespace SION.Models
                 TextBas = accueil.TextBas,
                 Image = accueil.Image,
                 TexteProphete = accueil.TexteProphete,
+                NomEglise = accueil.NomEglise,
+                NumeroLibelleAdresse = accueil.NumeroLibelleAdresse,
+                CodePostaleVillePays = accueil.CodePostaleVillePays,
+                NumeroTelephone = accueil.NumeroTelephone,
+                PremierJourCulte = accueil.PremierJourCulte,
+                DeuxiemeJourCulte = accueil.DeuxiemeJourCulte,
+                TroisiemeJourCulte = accueil.TroisiemeJourCulte,
+                AutreJoureCulte = accueil.AutreJoureCulte,
+                ImageChandelier = accueil.ImageChandelier,
+                ReseauxSociauxes = accueil.ReseauxSociauxes.ToList(),
                 MenuThematiques = accueil.MenuThematiques.ToList(),
             };
         }

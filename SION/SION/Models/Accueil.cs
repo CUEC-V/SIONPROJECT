@@ -19,7 +19,7 @@
 
         public string ImagePasteur { get; set; }
 
-        #region : Vidéo de la pière 
+        #region : Vidéo de la prière 
         public string TexteHaut { get; set; }
 
         public string Video { get; set; }
@@ -34,6 +34,30 @@
 
         #endregion
 
+        public string NomEglise { get; set; }
+
+        #region : Adresse 
+
+        public string NumeroLibelleAdresse { get; set; }
+
+        public string CodePostaleVillePays { get; set; }
+
+        public string NumeroTelephone { get; set; }
+        #endregion
+
+        #region : Horaires ouverture 
+        public string PremierJourCulte { get; set; }
+
+        public string DeuxiemeJourCulte { get; set; }
+
+        public string TroisiemeJourCulte { get; set; }
+
+        public string AutreJoureCulte { get; set; }
+
+        public string ImageChandelier { get; set; }
+
+        #endregion
+        public virtual ICollection<ReseauxSociaux> ReseauxSociauxes { get; set; }
         public virtual ICollection<MenuThematique> MenuThematiques { get; set; }
 
     }

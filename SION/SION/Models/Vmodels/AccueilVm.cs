@@ -33,5 +33,29 @@
         public string TexteProphete { get; set; }
 
         #endregion
+
+        public string NomEglise { get; set; }
+
+        #region : Adresse 
+
+        public string NumeroLibelleAdresse { get; set; }
+
+        public string CodePostaleVillePays { get; set; }
+
+        public string NumeroTelephone { get; set; }
+        #endregion
+
+        #region : Horaires ouverture 
+        public string PremierJourCulte { get; set; }
+
+        public string DeuxiemeJourCulte { get; set; }
+
+        public string TroisiemeJourCulte { get; set; }
+
+        public string AutreJoureCulte { get; set; }
+
+        public string ImageChandelier { get; set; }
+
+        #endregion
     }
 }
