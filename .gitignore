@@ -6,3 +6,6 @@
 
 # ignore all bin
 *.bin
+
+# ignore all bin
+*.vsidx
