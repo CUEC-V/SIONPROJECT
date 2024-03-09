@@ -8,4 +8,4 @@
 *.bin
 
 # ignore all bin
-*.vsidx
+*.vsidx 
