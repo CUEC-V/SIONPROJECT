@@ -1,11 +1,17 @@
-# ignore all logs
+/build/
+*.suo
+*.user
+_ReSharper.*/
+*.sdf
+bin/
+obj/
+Debug/
+Release/
+*.opensdf
+*.tlog
 *.log
-
-# ignore all dll
-*.dll
-
-# ignore all bin
-*.bin
-
-# ignore all bin
-*.vsidx 
+TestResult.xml
+*.VisualState.xml
+Version.cs
+Version.h
+Version.cpp 
