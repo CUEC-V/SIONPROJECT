@@ -119,6 +119,11 @@ namespace SION.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Test if the entity exist in the folder
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         private bool ReseauxSociauxDtoExists(int id)
         {
             return (_context.ReseauxSociaux?.Any(e => e.Id == id)).GetValueOrDefault();
