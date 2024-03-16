@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### Command pour utiliser bootstrp 
+ npm install bootstrap bootstrap-icons
+# Lien  
+https://www.freecodecamp.org/news/how-to-add-bootstrap-css-framework-to-an-angular-application/
+
+
