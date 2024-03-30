@@ -11,4 +11,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'SIONPROJECT';
+  reseaux : string[] = ["facebook.png","google.png","twitter.png","...."];
 }
