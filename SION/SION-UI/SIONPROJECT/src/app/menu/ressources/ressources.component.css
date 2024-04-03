@@ -1,0 +1,32 @@
+.ressource_presentation h2{
+  color:#FF7E05;
+  text-align: center;
+}
+
+
+.ressource_presentation p{
+  text-align: center;
+}
+
+
+
+.card_items{
+ padding:90px;
+
+}
+
+.btn_ressource{
+  background-color:#2F2E3D ;
+  color:white;
+  text-align: center;
+  width:15em;
+
+}
+
+.btn_ressource2{
+  background-color:#2F2E3D ;
+  color:white;
+width:15em;
+justify-content: center;
+
+}

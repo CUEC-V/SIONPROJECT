@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-ressources',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './ressources.component.html',
   styleUrl: './ressources.component.css'
 })
-export class RessourcesComponent {
 
+export class RessourcesComponent {
+  reseaux: string[] = ["facebook.png", "google.png", "twitter.png", "youtube.png"];
 }
+
