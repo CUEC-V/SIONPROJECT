@@ -1,6 +1,6 @@
 .ressource_presentation h2{
   color:#FF7E05;
-  text-align: center;
+
 }
 
 
@@ -9,11 +9,6 @@
 }
 
 
-
-.card_items{
- padding:90px;
-
-}
 .card{
   background-color: rgba(31, 76, 96, 0.5);
 }
@@ -22,14 +17,8 @@
   background-color:#2F2E3D ;
   color:white;
   text-align: center;
-  width:15em;
 
 }
 
-.btn_ressource2{
-  background-color:#2F2E3D ;
-  color:white;
-width:15em;
-justify-content: center;
 
-}
+
