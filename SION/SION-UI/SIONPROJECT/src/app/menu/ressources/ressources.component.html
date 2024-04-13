@@ -1,1 +1,93 @@
-<p>ressources works!</p>
+    <!-- Block 1-->
+    <div>
+        <div class="row">
+          <div class="col-sm-5">
+            <p class=" text-justify bg-dark-subtle m-2">
+              Pierre Angulaire Tabernacle, Église du Message du Temps de la Fin.
+              Nous croyons en JESUS-CHRIST, Seul et Unique DIEU, Seigneur et Sauveur, le même Hier Aujourd'hui et
+              Eternellement.
+
+              Nous croyons à la doctrine des prophètes et des apôtres. Et notre prophète c'est le prophète William Marrion
+              BRANHAM -Malachie 4:5
+              «Voici, je vous enverrai Élie, le prophète, Avant que le jour de l'Éternel arrive, Ce jour grand et
+              redoutable.»
+              Apocalypse 10:7 «mais qu'aux jours de la voix du septième ange,
+              quand il sonnerait de la trompette, le mystère de Dieu s'accomplirait.»
+            </p>
+          </div>
+          <div class="col-sm-2 m-2"><img src="/" /> </div>
+          <div class="col-sm-2 m-3"><img src="/" /> </div>
+          <div class="col-sm-2 m-2"><img src="/" /> </div>
+        </div>
+        <div class="d-flex m-2 justify-content-end">
+          <ul *ngFor="let reseau of reseaux">
+            <li><a href="#"><img src="{{reseau}}"></a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- présentation de la page ressources------------------------------------------>
+<div class="row">
+    <div class="ressource_presentation text-center">
+        <h2>Ressources</h2>
+        <p class="p-3">Vous trouverez toutes annonces, les cantiques, les témoignages, les photos etc</p>
+    </div>
+</div>
+
+<!-- liens de la page ressouces sous forme des cards-------------------------------------------------->
+
+
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card" style="height: 400px; width:300px;">
+        <div class="card-body">
+          <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/annonce.jpg" alt="Card image cap">
+          <h6 class="card-title text-center p-3">Les annonces</h6>
+          <p class="card-text p-1">Toutes les annonces de notre église.</p>
+          <a href="#" class="btn btn_ressource">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card" style="height: 400px;width:300px;">
+        <div class="card-body">
+          <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/cant.jpg" alt="Card image cap">
+          <h6 class="card-title text-center p-2">Cantiques, recueil des chants, nos moments d’adorations, louanges</h6>
+          <p class="card-text col 12 text-truncate">“Louez Dieu dans son sanctuaire! Louez-le dans l’étendue, où éclate sa puissance !
+             2 Louez-le pour ses hauts faits! Louez-le selon l'immensité de sa grandeur! ” -Psaumes 150 </p>
+          <a href="#" class="btn btn_ressource">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 sm-3">
+      <div class="card" style="height: 400px;width:300px;">
+        <div class="card-body">
+          <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/chainbroken.jpg" alt="Card image cap">
+          <h6 class="card-title text-center p-2">Les témoignages</h6>
+          <p class="card-text col-12 text-truncate p-2">Voici les miracles qui accompagneront ceux qui auront cru: en mon nom,
+            ils chasseront les démons; ils parleront de nouvelles langues;ils saisiront des serpents;
+            s'ils boivent quelque breuvage mortel, il ne leur fera point de mal; ils imposeront les mains aux malades,
+            et les malades, seront guéris.</p>
+          <a href="#" class="btn btn_ressource">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card" style="height: 400px;width:300px;">
+        <div class="card-body">
+          <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/wedding.jpg" alt="Card image cap">
+          <h6 class="card-title text-center p-2">Cérémonies, baptêmes, événements, photos, vidéos etc.</h6>
+          <p class="card-text col 12 text-truncate">Vous trouverez toutes les informations concernant les événements organisés à l’église.</p>
+          <a href="#" class="btn btn_ressource">En savoir plus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="d-flex justify-content-center p-5">
+    <a href="#" type="button" class="btn btn_ressource btn-block">Voir toutes les autres pages</a>
+</div>

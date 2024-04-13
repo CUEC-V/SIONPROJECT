@@ -1,0 +1,24 @@
+.ressource_presentation h2{
+  color:#FF7E05;
+
+}
+
+
+.ressource_presentation p{
+  text-align: center;
+}
+
+
+.card{
+  background-color: rgba(31, 76, 96, 0.5);
+}
+
+.btn_ressource{
+  background-color:#2F2E3D ;
+  color:white;
+  text-align: center;
+
+}
+
+
+
