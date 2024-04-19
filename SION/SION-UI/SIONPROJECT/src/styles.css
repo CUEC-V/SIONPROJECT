@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: serif;
+}
+
+h3 {
+    color: blue;
+    padding-bottom: 0.25em;
+    margin: 0.25em;
+}
+
+fieldset {
+    border: solid 0px lightgray;
+    border-radius: 8px;
+    padding: 1em;
+    margin: 2px;
+    background-color: whitesmoke;
+}
+
+fieldset legend {
+    color: blue;
+    margin: 1%;
+    padding: 1%;
+    cursor: pointer;
+}
+
+label {
+    color: blue;
+}
+
+input {
+    color: #FF7E05;
+}
+
+h4 {
+    padding: .25em;
+    margin: 0.25em;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: dashed 1px lightgray;
+}
+
+button {
+    padding: 0.50em;
+    margin: 0.25em;
+    border-radius: 20px;
+    width: 150px;
+    border: solid 2px #FF7E05;
+    border-bottom: solid 4px #FF7E05;
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+}
