@@ -57,7 +57,8 @@ namespace SION.Controllers
             return new AccueilVM
             {
                 Accueil = accueil.Vm(),
-                MenuThematique = accueil.MenuThematiques.Select(v => v.Vm()).ToList()
+                MenuThematique = accueil.MenuThematiques.Select(v => v.Vm()).ToList(),
+                ReseauxSociaux = accueil.ReseauxSociauxes.Select(v => v.Vm()).ToList()
             };
         }
 
@@ -95,6 +96,7 @@ namespace SION.Controllers
         // POST: api/Accueil
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Route("creer")]
         public async Task<ActionResult<AccueilDto>> PostAccueil(AccueilDto accueil)
         {
             if (_context.Accueils == null)
