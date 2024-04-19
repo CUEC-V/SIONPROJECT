@@ -9,6 +9,7 @@ import { NousRejoindreComponent } from './menu/services/nous-rejoindre/nous-rejo
 import { NousContacterComponent } from './menu/services/nous-contacter/nous-contacter.component';
 import { RessourcesComponent } from './menu/ressources/ressources.component';
 import { IntrouvableComponent } from './introuvable/introuvable.component';
+import { AdminComponent } from './accueil/admin/admin.component';
 
 export const routes: Routes = [
     {
@@ -22,6 +23,11 @@ export const routes: Routes = [
     {
         path: 'Biographie-du-pasteur',
         component: BiographieDuPasteurComponent
+    }
+    ,
+    {
+        path: 'administration-page-accueil',
+        component: AdminComponent
     },
     {
         path: 'Les-offices',

@@ -1,0 +1,175 @@
+<h3>Administration page d'accueil</h3>
+
+<form [formGroup]="accueilFormGroup" (ngSubmit)="onSubmit()">
+    <h4 (click)="toggle('I')">{{information}}</h4>
+    <fieldset  *ngIf="isIinformation" class="m-2">
+        <div class="formGroup">
+            <input type="hidden" formControlName="id" class="form-control" />
+            <div class="form-group">
+                <label for="nomEglise" class="control-label m-1">Nom de l'église</label>
+                <input formControlName="nomEglise" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('nomEglise')?.invalid"
+                    class="text-danger">{{nomEgliseMessage}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="texteIntroductif" class="control-label m-1">Texte introductif</label>
+                <input formControlName="texteIntroductif" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('texteIntroductif')?.invalid"
+                    class="text-danger">{{texteIntroductifMessage}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="imageAngeDuSeigneur" class="control-label m-1">Image de l'ange du Seigneur</label>
+                <input formControlName="imageAngeDuSeigneur" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('imageAngeDuSeigneur')?.invalid"
+                    class="text-danger">{{imageAngeDuSeigneur}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="imageNueeSunSet" class="control-label m-1">Image du nuée SunSet</label>
+                <input formControlName="imageNueeSunSet" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('imageNueeSunSet')?.invalid"
+                    class="text-danger">{{imageNueeSunSet}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="imageOffmann" class="control-label m-1">Image Offmann</label>
+                <input formControlName="imageOffmann" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('imageOffmann')?.invalid"
+                    class="text-danger">{{imageOffmann}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="texteApocalypseDixSept" class="control-label m-1">Texte apocalypse 10.7</label>
+                <input formControlName="texteApocalypseDixSept" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('texteApocalypseDixSept')?.invalid"
+                    class="text-danger">{{texteApocalypseDixSept}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="texteBienvenu" class="control-label m-1">Texte de bienvenu (e)</label>
+                <input formControlName="texteBienvenu" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('texteBienvenu')?.invalid"
+                    class="text-danger">{{texteBienvenu}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="imagePasteur" class="control-label m-1">Image du pasteur</label>
+                <input formControlName="imagePasteur" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('imagePasteur')?.invalid"
+                    class="text-danger">{{imagePasteur}}</span>
+            </div>
+
+            <div class="form-group">
+                <label for="imageChandelier" class="control-label m-1">Image du chandelier</label>
+                <input formControlName="imageChandelier" class="form-control" />
+                <span *ngIf="accueilFormGroup.get('imageChandelier')?.invalid"
+                    class="text-danger">{{imageChandelier}}</span>
+            </div>
+        </div>
+    </fieldset>
+    <!--========================================================================================================-->
+    <h4 (click)="toggle('VI')">{{videoPAT}}</h4>
+    <fieldset *ngIf="isVideoPAT" class="m-2">
+        <div class="form-group">
+            <label for="texteHaut" class="control-label m-1">Texte Haut</label>
+            <input formControlName="texteHaut" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('texteHaut')?.invalid"
+                class="text-danger">{{texteHaut}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="video" class="control-label m-1">Vidéo</label>
+            <input formControlName="video" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('video')?.invalid"
+                class="text-danger">{{video}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="textBas" class="control-label m-1">Texte Bas</label>
+            <input formControlName="textBas" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('textBas')?.invalid"
+                class="text-danger">{{textBas}}</span>
+        </div>
+
+    </fieldset>
+  <!--========================================================================================================-->
+    <h4 (click)="toggle('IA')">{{imageAigle}}</h4>
+    <fieldset *ngIf="isImageAigle" class="m-2">
+        <div class="form-group">
+            <label for="image" class="control-label m-1">Image de l'aigle</label>
+            <input formControlName="image" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('image')?.invalid"
+                class="text-danger">{{image}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="texteProphete" class="control-label m-1">Texte prophète</label>
+            <input formControlName="texteProphete" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('texteProphete')?.invalid"
+                class="text-danger">{{texteProphete}}</span>
+        </div>
+
+    </fieldset>
+  <!--========================================================================================================-->
+    <h4 (click)="toggle('A')">{{adresse}}</h4>
+    <fieldset *ngIf="isAdresse" class="m-2">
+        <div class="form-group">
+            <label for="numeroLibelleAdresse" class="control-label m-1">Numéro / Libellé adresse</label>
+            <input formControlName="numeroLibelleAdresse" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('numeroLibelleAdresse')?.invalid"
+                class="text-danger">{{numeroLibelleAdresse}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="codePostaleVillePays" class="control-label m-1">Code postale / Ville / Pays</label>
+            <input formControlName="codePostaleVillePays" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('codePostaleVillePays')?.invalid"
+                class="text-danger">{{codePostaleVillePays}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="numeroTelephone" class="control-label m-1">Numéro téléphone</label>
+            <input formControlName="numeroTelephone" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('numeroTelephone')?.invalid"
+                class="text-danger">{{numeroTelephone}}</span>
+        </div>
+
+    </fieldset>
+      <!--========================================================================================================-->
+    <h4 (click)="toggle('HO')">{{horairesOuverture}}</h4>
+    <fieldset *ngIf="isHorairesOuverture" class="m-2">
+        <div class="form-group">
+            <label for="premierJourCulte" class="control-label m-1">Premier jour de culte</label>
+            <input formControlName="premierJourCulte" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('premierJourCulte')?.invalid"
+                class="text-danger">{{premierJourCulte}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="deuxiemeJourCulte" class="control-label m-1">Deuxième jour de culte</label>
+            <input formControlName="deuxiemeJourCulte" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('deuxiemeJourCulte')?.invalid"
+                class="text-danger">{{deuxiemeJourCulte}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="troisiemeJourCulte" class="control-label m-1">Troisième jour de culte</label>
+            <input formControlName="troisiemeJourCulte" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('troisiemeJourCulte')?.invalid"
+                class="text-danger">{{troisiemeJourCulte}}</span>
+        </div>
+
+        <div class="form-group">
+            <label for="autreJoureCulte" class="control-label m-1">Autre jour de culte</label>
+            <input formControlName="autreJoureCulte" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('autreJoureCulte')?.invalid"
+                class="text-danger">{{autreJoureCulte}}</span>
+        </div>
+
+    </fieldset>
+    <div class="d-flex">
+        <button class="bnt bnt-primary" type="submit" [disabled]="!accueilFormGroup.valid">Valider</button>
+    </div>
+</form>
