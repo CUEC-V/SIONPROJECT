@@ -6,7 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './ressources.component.html',
-  styleUrl: './ressources.component.css'
+  styleUrl: './ressources.component.css',
+
 })
 
 export class RessourcesComponent {
