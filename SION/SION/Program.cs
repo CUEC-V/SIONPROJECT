@@ -12,8 +12,8 @@ var corsName = "PAT-TAB";
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<SionContext>(opt =>
-    opt.UseInMemoryDatabase("SionItems")
-    /*opt.UseSqlServer(@"Server=\SQLEXPRESS;Database=sion;Integrated Security=True;TrustServerCertificate=true")*/
+    /*opt.UseInMemoryDatabase("SionItems")*/
+    opt.UseSqlServer(@"Server=[nom ordinateur]\SQLEXPRESS;Database=sion;Integrated Security=True;TrustServerCertificate=true")
     );
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
