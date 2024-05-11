@@ -1,3 +1,18 @@
 .bienvenu-sion {
     color:#FF7E05;
 }
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.pierre-angulaire {
+    width: 150px;
+    background-color: rgba(211, 227, 232, 0.3);
+    padding: .25em;
+}
+
+.bg-light-a {
+    background-color: rgba(211, 227, 232, 0.3);
+}

@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Configuration } from '../../configuration';
 import { AccueilModel } from '../models/accueil-model';
-import { Observable, catchError, tap, throwError } from 'rxjs';
+import { Observable, catchError, map, tap, throwError } from 'rxjs';
 import { Accueil } from '../models/accueil';
 
 @Injectable({
@@ -33,13 +33,20 @@ export class AccueilService {
       catchError(this.handleError));
   }
 
+  getVideoByVideoIdForChanel(channel: string, videoId: string): Observable<any> {
+    let url = 'https://www.googleapis.com/youtube/v3/search?key=' + Configuration.Youtube_API_KEY + '&channelId=' + channel + '&order=date&part=snippet &type=video,videoId=' + videoId
+    return this.http.get(url)
+      .pipe(map((res) => {
+        return res;
+      }))
+  }
+  
   private handleError(err: HttpErrorResponse) {
     let errorMessage = '';
     console.log(err);
     console.log('===> '+err.type);
   
       errorMessage = `Server returned message / code : ${err.message} / ${err.status}, error message is : ${err.message}`;
-  
 
     console.error(errorMessage);
 
