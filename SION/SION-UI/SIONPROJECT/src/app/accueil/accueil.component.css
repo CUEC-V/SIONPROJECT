@@ -1,3 +1,75 @@
 .bienvenu-sion {
-    color:#FF7E05;
+    color: #FF7E05;
+}
+
+.paragraphe {
+    text-align: justify;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.image-ajuster {
+    height: 400px;
+}
+
+.image-ajuster-small {
+    height: 400px;
+    width: 68%;
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.ressource-presentation h2 {
+    color: #FF7E05;
+}
+
+.card {
+    background-color: rgba(31, 76, 96, 0.3);
+    height: 416px;
+    width: 300px;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card:visited {
+    color: green;
+}
+
+.card:hover {
+    background-color: rgb(225, 208, 179);
+    opacity: 0.9;
+    color: rgb(6, 6, 6);
+}
+
+.card img:hover {
+    opacity: 0.5;
+}
+
+.card:active {
+    color: rgb(34, 34, 32);
+}
+
+.card h6 {
+    font-weight: bolder;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.btn-ressource {
+    background-color: #2F2E3D;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn-ressource:hover {
+    background-color: rgb(151, 214, 226);
+    color: black;
 }
