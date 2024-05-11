@@ -1,1 +1,17 @@
-<p>predications works!</p>
+<h3> <span *ngIf="videos.length">{{videos.length}} </span>Prédications <button style="width: 200px;" (click)="afficherplus(youtubeVideosNumber)">Afficher + </button></h3>
+<div class="row m-2">
+    <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-0 shadow vh-50">
+            <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+            <div class="card-body text-center">
+                <h5 class="card-title mb-0">
+                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
+                    </a>
+                </h5>
+               <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
+                <p><strong>Publiée le : </strong>{{video.snippet.publishTime | date:'dd-MM-yyyy hh:mm:ss'}}</p>
+            </div>
+        </div>
+    </div>
+</div>
