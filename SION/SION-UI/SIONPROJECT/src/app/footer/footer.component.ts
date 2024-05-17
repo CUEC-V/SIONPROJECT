@@ -3,11 +3,12 @@ import { FooterService } from '../core/footer.service';
 import { Accueil } from '../accueil/models/accueil';
 import { CommonModule } from '@angular/common';
 import { Configuration } from '../configuration';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLinkWithHref],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })

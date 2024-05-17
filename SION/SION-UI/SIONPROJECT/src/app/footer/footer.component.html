@@ -1,4 +1,4 @@
-<div *ngIf="accueil" class="d-block m-2 vh-100 ft-bg">
+<div *ngIf="accueil" class="d-block m-2 ft-bg">
     <div class="row m-2 p-2">
         <div class="col-sm-8">{{accueil.accueil.nomEglise}}</div>
         <div class="col-sm-4">Plan du site</div>
@@ -38,8 +38,8 @@
             <h3>Ressources</h3>
         </div>
     </div>
-    <div class="row footer-bg vh-100">
-        <div class="col-sm-4">&copy;{{pat_date_creation}} - {{date |date:'yyyy'}} {{accueil.accueil.nomEglise}}</div>
+    <div class="row m-0 footer-bg align-content-center">
+        <div class="col-sm-4"><a routerLink="/"> &copy;{{pat_date_creation}} - {{date |date:'yyyy'}} {{accueil.accueil.nomEglise}}</a></div>
         <div class="col-sm-4"><a routerLink="/mentions-legales">Mentions légales</a></div>
         <div class="col-sm-4"><a routerLink="/tous-droits-reserves">Tous droits réservés</a></div>
     </div>

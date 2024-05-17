@@ -1,0 +1,7 @@
+.afficher-plus {
+    cursor: pointer;
+}
+
+.afficher-plus :hover {
+    text-decoration: underline;
+}
