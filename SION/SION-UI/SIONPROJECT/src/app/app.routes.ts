@@ -15,6 +15,8 @@ import { VoirToutesLesPagesComponent } from './menu/ressources/pages/voir-toutes
 import { AnnoncesComponent } from './menu/ressources/annonces/annonces.component';
 import { TemoignagesComponent } from './menu/ressources/temoignages/temoignages.component';
 import { CantiquesChantsComponent } from './menu/ressources/cantiques-chants/cantiques-chants.component';
+import { MentionsLegalesComponent } from './footer/mentions-legales/mentions-legales.component';
+import { TousDroitsReservesComponent } from './footer/tous-droits-reserves/tous-droits-reserves.component';
 
 export const routes: Routes = [
     {
@@ -84,7 +86,16 @@ export const routes: Routes = [
       component: CeremoniesEvenementComponent
 
     },
-
+    {
+        path: 'mentions-legales',
+        component: MentionsLegalesComponent
+  
+      },
+      {
+        path: 'tous-droits-reserves',
+        component: TousDroitsReservesComponent
+  
+      },
     {
         path: '**',
         component: IntrouvableComponent

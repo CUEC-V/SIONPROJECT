@@ -4,5 +4,12 @@
 
 .footer-bg {
     background-color: aqua;
-    height: 100px;
+    height: 90px;
+}
+
+.footer-bg div a {
+    text-decoration: none;
+}
+.footer-bg div a:hover {
+    text-decoration: underline;
 }
