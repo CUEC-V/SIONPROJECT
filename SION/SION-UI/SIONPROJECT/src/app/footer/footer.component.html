@@ -1,7 +1,7 @@
 <div *ngIf="accueil" class="d-block m-2 ft-bg">
     <div class="row m-2 p-2">
         <div class="col-sm-8">{{accueil.accueil.nomEglise}}</div>
-        <div class="col-sm-4">Plan du site</div>
+        <div class="col-sm-4">Plan du site web</div>
     </div>
     <div class="row m-2 p-2">
         <div class="col-sm-3">
@@ -10,6 +10,9 @@
 
             <span class="d-block mt-2">Téléphone : {{accueil.accueil.numeroTelephone}}</span>
             <h3 class="mt-2">Nos réseaux sociaux</h3>
+            <ul *ngIf="accueil.reseauxSociaux">
+              <li  *ngFor="let r of accueil.reseauxSociaux">{{r.urlImage}}</li>
+            </ul>
         </div>
         <div class="col-sm-3">
             <h3 class="m-0">Ouverture des portes</h3>

@@ -1,0 +1,35 @@
+<form [formGroup]="reseauSocialFormGroup" (ngSubmit)="onSubmit()">
+    <h4>Administration réseaux sociaux</h4>
+    <fieldset class="m-2">
+        <div class="formGroup">
+            <input type="hidden" formControlName="id" class="form-control" />
+            <div class="form-group">
+                <label for="nomEglise" class="control-label m-1">Lien url du réseau social</label>
+                <input formControlName="urlImage" class="form-control" />
+                <span *ngIf="reseauSocialFormGroup.get('urlImage')?.invalid" class="text-danger">Ce lien est
+                    obligatoire</span>
+            </div>
+
+            <div class="form-group">
+                <label for="texteIntroductif" class="control-label m-1">Description</label>
+                <input formControlName="description" class="form-control" />
+                <span *ngIf="reseauSocialFormGroup.get('description')?.invalid" class="text-danger">Description est
+                    obligatoire </span>
+            </div>
+
+            <div class="form-group">
+                <label for="imageAngeDuSeigneur" class="control-label m-1">Numéro de la page où va être affiché le
+                    réseau social.</label>
+                <input formControlName="accueilId" class="form-control" />
+                <span *ngIf="reseauSocialFormGroup.get('accueilId')?.invalid" class="text-danger">Ce numéro doit-être
+                    supérieure à 0</span>
+            </div>
+
+            
+        </div>
+        <div class="d-flex text-center justify-content-center">
+            <button class="bnt bnt-primary" type="submit" [disabled]="!reseauSocialFormGroup.valid">Valider</button>
+        </div>
+    </fieldset>
+
+</form>
