@@ -1,0 +1,19 @@
+.annonces-cards{
+
+  margin:2em;
+}
+
+
+.ressource-presentation h2{
+ color:#FF7E05;
+ padding:20px;
+}
+
+
+.btn-ressource{
+  background-color:#2F2E3D ;
+  color:white;
+  transition: 0.3s;
+
+
+}
