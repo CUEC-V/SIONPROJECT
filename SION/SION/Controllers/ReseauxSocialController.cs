@@ -55,13 +55,22 @@ namespace SION.Controllers
 
         // PUT: api/ReseauxSocial/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutReseauxSociauxDto(int id, ReseauxSociauxDto reseauxSociaux)
+        //[HttpPut("{id}")]
+        [Route("modifie")]
+        [HttpPut]
+        public async Task<IActionResult> PutReseauxSociauxDto(ReseauxSociauxDto reseauxSociaux)
         {
-            if (id != reseauxSociaux.Id)
-            {
-                return BadRequest();
-            }
+            //if (id != reseauxSociaux.Id)
+            //{
+            //    return BadRequest();
+            //}
+
+            var dto = await _context.ReseauxSociaux.FindAsync(reseauxSociaux.Id);
+
+            if (dto == null)
+                return NotFound();
+
+         //   reseauxSociaux.Id = dto.Id;
 
             _context.Entry(reseauxSociaux.ToDto()).State = EntityState.Modified;
 
@@ -71,7 +80,7 @@ namespace SION.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ReseauxSociauxDtoExists(id))
+                if (!ReseauxSociauxDtoExists(reseauxSociaux.Id))
                 {
                     return NotFound();
                 }
@@ -87,6 +96,7 @@ namespace SION.Controllers
         // POST: api/ReseauxSocial
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Route("creer")]
         public async Task<ActionResult<ReseauxSociauxDto>> PostReseauxSociauxDto(ReseauxSociauxDto reseauxSociaux)
         {
             if (_context.ReseauxSociaux == null)

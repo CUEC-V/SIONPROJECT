@@ -17,6 +17,10 @@ import { TemoignagesComponent } from './menu/ressources/temoignages/temoignages.
 import { CantiquesChantsComponent } from './menu/ressources/cantiques-chants/cantiques-chants.component';
 import { MentionsLegalesComponent } from './footer/mentions-legales/mentions-legales.component';
 import { TousDroitsReservesComponent } from './footer/tous-droits-reserves/tous-droits-reserves.component';
+import { AdminGeneralComponent } from './admin-general/admin-general.component';
+import { AdminReseauSocialComponent } from './features/reseau-social/admin-reseau-social/admin-reseau-social.component';
+import { ReseauSocialComponent } from './features/reseau-social/reseau-social.component';
+import { MajComponent } from './features/reseau-social/maj/maj.component';
 
 export const routes: Routes = [
     {
@@ -35,6 +39,10 @@ export const routes: Routes = [
     {
         path: 'administration-page-accueil',
         component: AdminComponent
+    },
+    {
+        path: 'administration-general',
+        component: AdminGeneralComponent
     },
     {
         path: 'Les-offices',
@@ -89,13 +97,27 @@ export const routes: Routes = [
     {
         path: 'mentions-legales',
         component: MentionsLegalesComponent
-  
       },
       {
         path: 'tous-droits-reserves',
         component: TousDroitsReservesComponent
-  
+      }, 
+      {
+        path: 'admin-reseau-social',
+        component: AdminReseauSocialComponent
       },
+      {
+        path: 'reseau-social',
+        component: ReseauSocialComponent
+      },
+      {
+        path: 'reseau-social/:id',
+        component: MajComponent
+      },
+      {
+        path: 'reseau-social/modifie/:id',
+        component: MajComponent
+    },
     {
         path: '**',
         component: IntrouvableComponent
