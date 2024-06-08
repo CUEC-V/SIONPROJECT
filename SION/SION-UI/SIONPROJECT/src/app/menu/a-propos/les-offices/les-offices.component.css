@@ -1,0 +1,22 @@
+h2 {
+    color: var(--bs-orange);
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
+ 
+p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+.carousel-item {
+  width: 100%;
+  background-color: antiquewhite;
+  
+}
+
+.container { 
+  width: 50%;
+  height: 50%;
+ 
+  
+}
