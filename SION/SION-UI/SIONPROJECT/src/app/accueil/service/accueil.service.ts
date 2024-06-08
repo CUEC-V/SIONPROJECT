@@ -12,9 +12,7 @@ import { Accueil } from '../models/accueil';
 @Injectable()
 export class AccueilService {
 
-  constructor(private http: HttpClient) {
-    let url = Configuration;
-  }
+  constructor(private http: HttpClient) {}
 
   getAccueil(): Observable<Accueil[]> {
     return this.http.get<Accueil[]>(`${Configuration.UrlApi}/accueil`).pipe(

@@ -30,7 +30,7 @@ export class PredicationsComponent implements OnInit, OnDestroy {
   }
 
   afficherplus(n: number) {
-    this.youtubeVideosNumber += n;
+    this.youtubeVideosNumber += Configuration.Youtube_VIDEOS_NUMBER;
     console.log(this.youtubeVideosNumber);
     this.predicationService
       .getVideosForChanel(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber)

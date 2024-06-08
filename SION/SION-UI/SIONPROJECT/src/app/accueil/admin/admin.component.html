@@ -1,3 +1,5 @@
+<i class="fa-solid fa-left-long"></i>
+
 <h3>Administration page d'accueil</h3>
 
 <form [formGroup]="accueilFormGroup" (ngSubmit)="onSubmit()">
@@ -169,7 +171,7 @@
         </div>
 
     </fieldset>
-    <div class="d-flex">
+    <div class="d-flex justify-content-center">
         <button class="bnt bnt-primary" type="submit" [disabled]="!accueilFormGroup.valid">Valider</button>
     </div>
 </form>

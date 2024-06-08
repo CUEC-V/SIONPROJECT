@@ -8,9 +8,9 @@ namespace SION.DbData
     {
         public SionContext(DbContextOptions<SionContext> context) : base(context) { }
 
-        public DbSet<Accueil> Accueils { get; set; } = null;
+        public DbSet<Accueil> Accueils { get; set; } = default!;
 
-        public DbSet<MenuThematique> MenuThematiques { get; set; } = null;
+        public DbSet<MenuThematique> MenuThematiques { get; set; } = default!;
 
         public DbSet<ReseauxSociaux> ReseauxSociaux { get; set; } = default!;
     }
