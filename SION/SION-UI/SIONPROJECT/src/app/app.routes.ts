@@ -21,6 +21,7 @@ import { AdminGeneralComponent } from './admin-general/admin-general.component';
 import { AdminReseauSocialComponent } from './features/reseau-social/admin-reseau-social/admin-reseau-social.component';
 import { ReseauSocialComponent } from './features/reseau-social/reseau-social.component';
 import { MajComponent } from './features/reseau-social/maj/maj.component';
+import { AnnoncesDetailComponent } from './menu/ressources/pages/annonces-detail/annonces-detail.component';
 
 export const routes: Routes = [
     {
@@ -78,6 +79,12 @@ export const routes: Routes = [
     },
 
     {
+      path: 'ressources/annonces-detail',
+      component: AnnoncesDetailComponent
+
+    },
+
+    {
       path: 'ressources/temoignages',
       component: TemoignagesComponent
 
@@ -101,7 +108,7 @@ export const routes: Routes = [
       {
         path: 'tous-droits-reserves',
         component: TousDroitsReservesComponent
-      }, 
+      },
       {
         path: 'admin-reseau-social',
         component: AdminReseauSocialComponent

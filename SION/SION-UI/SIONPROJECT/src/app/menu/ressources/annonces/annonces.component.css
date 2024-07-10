@@ -1,19 +1,39 @@
 .annonces-cards{
 
-  margin:2em;
+  margin:1em;
+  padding: 50px;
+
 }
 
+.annonces-cards a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
 
 .ressource-presentation h2{
  color:#FF7E05;
- padding:20px;
+ padding:2px;
+
 }
 
 
-.btn-ressource{
-  background-color:#2F2E3D ;
+.btn-annonce{
+  background-color:#09090a ;
   color:white;
   transition: 0.3s;
-
+  padding: 12px;
+  width: 10em;
+  border: 1px solid;
+  border-radius: 2em;
+  text-align: center;
+  text-decoration: none;
 
 }
+
+.container {
+  width: 30em;
+}
+
