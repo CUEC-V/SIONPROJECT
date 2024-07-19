@@ -35,8 +35,7 @@ export class ReseauSocialService {
       catchError(this.handleError));
   }
   //maj = mise à jours
-  maj(id: number, i: any): Observable<any> {
-    i.id = id;
+  maj(i: any): Observable<any> {
     let cons = `${Configuration.UrlApi}/ReseauxSocial/modifie`;
     return this.http.put<any>(cons, i, {
       headers: {

@@ -44,7 +44,7 @@ export class MajComponent implements OnInit {
     var form = this.reseauSocialFormGroup.value;
     console.log(form);
 
-    this.reseauSocialService.maj(this.reseauSocial.id, form)
+    this.reseauSocialService.maj(form)
     .subscribe({
       next: r => {
         this.reseauSocial = r;
