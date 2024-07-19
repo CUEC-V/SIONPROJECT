@@ -31,6 +31,18 @@ export class AccueilService {
       catchError(this.handleError));
   }
 
+  modifier(id: number, accueilEdit: AccueilModel): Observable<AccueilModel> {
+    let urlModifie = `${Configuration.UrlApi}/accueil/modifie`;
+    return this.http.put<AccueilModel>(urlModifie, accueilEdit, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).pipe(
+      tap(c => console.log(c)),
+      catchError(this.handleError));
+  }
+
   getVideoByVideoIdForChanel(channel: string, videoId: string): Observable<any> {
     let url = 'https://www.googleapis.com/youtube/v3/search?key=' + Configuration.Youtube_API_KEY + '&channelId=' + channel + '&order=date&part=snippet &type=video,videoId=' + videoId
     return this.http.get(url)
