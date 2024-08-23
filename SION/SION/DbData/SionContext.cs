@@ -13,5 +13,7 @@ namespace SION.DbData
         public DbSet<MenuThematique> MenuThematiques { get; set; } = default!;
 
         public DbSet<ReseauxSociaux> ReseauxSociaux { get; set; } = default!;
+
+        public DbSet<Contact> Contacts { get; set; } = default!;
     }
 }

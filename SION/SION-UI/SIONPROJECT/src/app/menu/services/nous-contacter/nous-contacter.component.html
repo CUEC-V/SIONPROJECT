@@ -1,1 +1,88 @@
-<p>nous-contacter works!</p>
+<div class="row m-2">
+    <div class="col-md-6 p-2 border text-justify">
+        Il y a eu Philippe, qui avait vu Jésus, dans des expériences passées, et qui est allé
+        trouver Nathanaël derrière la montagne. Et il a dit : “Viens voir Celui que nous avons
+        trouvé, Jésus de Nazareth, fils de Joseph.” Et cet homme, qui était très orthodoxe, a dit :
+        “Mais, peut-il venir de Nazareth quelque chose de bon?” Il a dit : “Viens et vois.” Pourquoi?
+        Il avait été avec Jésus. Il savait qu’il y avait quelque chose dans cet Homme,
+        qui était largement de taille à faire face à tout ce que le diable pouvait présenter. Oh,
+        écoutez attentivement. <b class="d-block"> 57-1229 - La Foi Rev. William Marrion Branham </b>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-5 border">
+        <h3 *ngIf="reseaux" class="m-2">Depuis les réseaux sociaux</h3>
+        <i class="fa-solid fa-user"></i>
+        <ul *ngIf="reseaux" class="d-flex">
+            <li *ngFor="let rs of reseaux" [innerHtml]="rs.urlImage" title="{{rs.description}}" class="m-2"></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="m-2 p-1">Nous écrire, une question, une remarque ?</h2>
+<form [formGroup]="contactFormGroup" (ngSubmit)="onSubmit()">
+    <fieldset class="m-2">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="formGroup">
+                    <input type="hidden" formControlName="id" class="form-control" />
+                    <div class="form-group">
+                        <label for="nomEtprenoms" class="control-label m-1">Nom (s) et prénom (s) *</label>
+                        <input formControlName="nomEtprenoms" class="form-control" />
+                        <span *ngIf="contactFormGroup.get('nomEtprenoms')?.invalid" class="text-danger">Nom (s) et
+                            prénom
+                            (s) est réquis</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="formGroup">
+                    <div class="form-group">
+                        <label for="courriel" class="control-label m-1">Courriel *</label>
+                        <input formControlName="courriel" class="form-control" />
+                        <span *ngIf="contactFormGroup.get('courriel')?.invalid" class="text-danger">Courriel
+                            réquis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="formGroup">
+                <div class="form-group">
+                    <label for="sujetCourriel" class="control-label m-1">Sujet *</label>
+                    <input formControlName="sujetCourriel" class="form-control" />
+                    <span *ngIf="contactFormGroup.get('sujetCourriel')?.invalid" class="text-danger">Sujet réquis</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="formGroup">
+                <div class="form-group">
+                    <label for="telephone" class="control-label m-1">Téléphone</label>
+                    <input formControlName="telephone" class="form-control" />
+                    <span *ngIf="contactFormGroup.get('telephone')?.invalid" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="formGroup">
+                <div class="form-group">
+                    <label for="message" class="control-label m-1">Message *</label>
+                    <textarea formControlName="message" class="form-control" rows="{{rows}}"></textarea>
+                    <span *ngIf="contactFormGroup.get('message')?.invalid" class="text-danger">
+                        Message est réquis
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <div class="d-flex justify-content-center">
+        <button class="bnt bnt-primary" type="submit" [disabled]="!contactFormGroup.valid">Envoyer</button>
+    </div>
+</form>

@@ -1,0 +1,39 @@
+
+    <fieldset *ngIf="message" class="m-2">
+        <a routerLink="/message-recus" class="d-block m-2">&LeftArrow;</a>
+        <div class="row m-2">
+            <div class="col-md-12">
+                <div class="formGroup">
+                    <input type="hidden" formControlName="id" class="form-control" />
+                    <div class="form-group">
+                        <input formControlName="nomEtprenoms" [value]="raisonSocial" class="form-control" readonly/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-2">
+            <div class="formGroup">
+                <div class="form-group">
+                    <input formControlName="sujetCourriel" [value]="message.sujetCourriel"  class="form-control" readonly />
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-2">
+            <div class="formGroup">
+                <div class="form-group">
+                    <input formControlName="telephone" [value]="message.telephone"  class="form-control" readonly />
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-2">
+            <div class="formGroup">
+                <div class="form-group">
+                    <textarea formControlName="message" class="form-control" readonly rows="{{rows}}">{{message.message }}</textarea>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+

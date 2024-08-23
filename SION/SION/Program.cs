@@ -26,6 +26,14 @@ builder.Services.AddDbContext<SionContext>(opt =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddHsts(options =>
+{
+    options.Preload = true;
+    options.IncludeSubDomains = true;
+    options.MaxAge = TimeSpan.FromDays(60);
+    options.ExcludedHosts.Add("http://localhost:4200");
+});
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: corsName,
