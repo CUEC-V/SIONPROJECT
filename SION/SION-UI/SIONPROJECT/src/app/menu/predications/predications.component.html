@@ -2,7 +2,7 @@
     <div class="ressource-presentation text-center">
         <h2>Prédications</h2>
         <h5  *ngIf="videos.length" class="p-3">Nous avons trouvé, {{videos.length}} prédication(s)  </h5>
-        <div  class="m-2 p-1 afficher-plus" (click)="afficherplus(youtubeVideosNumber)">Afficher + </div>
+        <div  *ngIf="videos.length" class="m-2 p-1 afficher-plus" (click)="afficherplus(youtubeVideosNumber)">Afficher + </div>
     </div>
 </div>
 

@@ -1,0 +1,8 @@
+<h1>Liste des messages envoyés</h1>
+<div *ngIf="messages" class="row m-2">
+    <ol>
+        <li *ngFor="let m of messages" class="m-2 border-bottom">
+            <a [routerLink]="['/message-recus',m.id]" style="text-decoration: none;">{{m.sujetCourriel}}</a>
+        </li>
+    </ol>
+</div>
