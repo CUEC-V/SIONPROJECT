@@ -30,10 +30,12 @@ namespace SION.Controllers
             {
                 return NotFound();
             }
-            return _context.Accueils
+            var accueils = _context.Accueils
                 .Include(t => t.MenuThematiques)
                 .Include(t => t.ReseauxSociauxes)
                 .Select(s => new AccueilVM { Accueil = s.Vm(), MenuThematique = s.MenuThematiques.Select(v => v.Vm()).ToList(), ReseauxSociaux = s.ReseauxSociauxes.Select(v => v.Vm()).ToList() }).ToList();
+
+            return accueils;
         }
 
         // GET: api/Accueil/5
@@ -64,30 +66,35 @@ namespace SION.Controllers
 
         // PUT: api/Accueil/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAccueil(int id, AccueilDto accueil)
+        //[HttpPut("{id}")]
+        [HttpPut]
+        [Route("modifie")]
+        public async Task<IActionResult> PutAccueil(AccueilDto accueil)
         {
-            if (id != accueil.Id)
-            {
-                return BadRequest();
-            }
+            var dto = await _context.Accueils.FindAsync(accueil.Id);
+            if (dto == null)
+                return NotFound();
+                
+                _context.Entry(dto).State = EntityState.Detached;
 
-            _context.Entry(accueil.ToDto()).State = EntityState.Modified;
+            var dt = accueil.ToDto();
+
+            try
+            {
+                _context.Accueils.Entry(dt).State = EntityState.Modified;
+            }
+            catch (Exception ex)
+            {
+
+            }
 
             try
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (!AccueilExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+
             }
 
             return NoContent();

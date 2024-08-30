@@ -11,14 +11,28 @@ var corsName = "PAT-TAB";
 
 builder.Services.AddControllers();
 
+var config = new ConfigurationBuilder()
+           .AddJsonFile("appsettings.json")
+           .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+           .Build();
+
+var connectionString = config.GetSection("ConnectionStrings")["DefaultConnection"];
+
 builder.Services.AddDbContext<SionContext>(opt =>
     /*opt.UseInMemoryDatabase("SionItems")*/
-    opt.UseSqlServer(@"Server=[nom ordinateur]\SQLEXPRESS;Database=sion;Integrated Security=True;TrustServerCertificate=true")
-    );
+    opt.UseSqlServer(connectionString));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddHsts(options =>
+{
+    options.Preload = true;
+    options.IncludeSubDomains = true;
+    options.MaxAge = TimeSpan.FromDays(60);
+    options.ExcludedHosts.Add("http://localhost:4200");
+});
 
 builder.Services.AddCors(options =>
 {

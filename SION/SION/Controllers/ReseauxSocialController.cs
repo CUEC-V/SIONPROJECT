@@ -70,7 +70,8 @@ namespace SION.Controllers
             if (dto == null)
                 return NotFound();
 
-         //   reseauxSociaux.Id = dto.Id;
+            //   reseauxSociaux.Id = dto.Id;
+            _context.Entry(dto).State = EntityState.Detached;
 
             _context.Entry(reseauxSociaux.ToDto()).State = EntityState.Modified;
 
