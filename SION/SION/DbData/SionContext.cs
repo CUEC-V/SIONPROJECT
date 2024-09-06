@@ -15,5 +15,7 @@ namespace SION.DbData
         public DbSet<ReseauxSociaux> ReseauxSociaux { get; set; } = default!;
 
         public DbSet<Contact> Contacts { get; set; } = default!;
+
+        public DbSet<Ressource> Ressources { get; set; } = default!;
     }
 }

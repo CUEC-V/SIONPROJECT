@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SION.DbData;
 
@@ -11,9 +12,11 @@ using SION.DbData;
 namespace SION.Migrations
 {
     [DbContext(typeof(SionContext))]
-    partial class SionContextModelSnapshot : ModelSnapshot
+    [Migration("20240830171435_ressources")]
+    partial class ressources
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -218,9 +221,6 @@ namespace SION.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Creation")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateModification")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")

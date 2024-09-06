@@ -23,6 +23,7 @@ import { ReseauSocialComponent } from './features/reseau-social/reseau-social.co
 import { MajComponent } from './features/reseau-social/maj/maj.component';
 import { MessageListComponent } from './menu/services/nous-contacter/contact/message-list/message-list.component';
 import { MessageDetailComponent } from './menu/services/nous-contacter/contact/message-detail/message-detail.component';
+import { AjouterRessourceComponent } from './menu/ressources/ajouter-ressource/ajouter-ressource.component';
 
 export const routes: Routes = [
   {
@@ -94,7 +95,10 @@ export const routes: Routes = [
   {
     path: 'ressources/ceremonies-evenement',
     component: CeremoniesEvenementComponent
-
+  },
+  {
+    path: 'ressources/ressource-ajout',
+    component: AjouterRessourceComponent
   },
   {
     path: 'mentions-legales',
