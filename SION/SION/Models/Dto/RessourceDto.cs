@@ -24,6 +24,8 @@ namespace SION.Models
         public DateTime DateModification { get; set; }
 
         public string? TypeRessource { get; set; }
-        
+
+        public bool IsPublie { get; set; }
+
     }
 }

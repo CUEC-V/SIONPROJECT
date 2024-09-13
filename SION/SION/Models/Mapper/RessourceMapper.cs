@@ -15,6 +15,7 @@
                 Url = ressource.Url,
                 TypeRessource = ressource.TypeRessource,
                 DateModification = ressource.DateModification,
+                 IsPublie = ressource.IsPublie,
             };
         }
 
@@ -30,7 +31,8 @@
                 Titre = ressource.Titre,
                 Url = ressource.Url,
                 TypeRessource = ressource.TypeRessource,
-                DateModification = ressource.DateModification
+                DateModification = ressource.DateModification,
+                 IsPublie= ressource.IsPublie,
             };
         }
 
