@@ -45,6 +45,5 @@ export class PredicationsComponent implements OnInit, OnDestroy {
       this.videos = [];
     }
   }
-
 }
 

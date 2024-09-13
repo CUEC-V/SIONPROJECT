@@ -21,8 +21,11 @@ import { AdminGeneralComponent } from './admin-general/admin-general.component';
 import { AdminReseauSocialComponent } from './features/reseau-social/admin-reseau-social/admin-reseau-social.component';
 import { ReseauSocialComponent } from './features/reseau-social/reseau-social.component';
 import { MajComponent } from './features/reseau-social/maj/maj.component';
+import { AnnoncesDetailComponent } from './menu/ressources/pages/annonces-detail/annonces-detail.component';
 import { MessageListComponent } from './menu/services/nous-contacter/contact/message-list/message-list.component';
 import { MessageDetailComponent } from './menu/services/nous-contacter/contact/message-detail/message-detail.component';
+import { AjouterRessourceComponent } from './menu/ressources/ajouter-ressource/ajouter-ressource.component';
+import { GestionComponent } from './menu/ressources/gestion/gestion.component';
 
 export const routes: Routes = [
   {
@@ -78,23 +81,33 @@ export const routes: Routes = [
     component: AnnoncesComponent
 
   },
-
   {
-    path: 'ressources/temoignages',
-    component: TemoignagesComponent
+    path: 'ressources/annonces-detail',
+    component: AnnoncesDetailComponent
 
   },
 
   {
+    path: 'ressources/temoignages',
+    component: TemoignagesComponent
+  },
+  {
+    path: 'ressources/temoignages/gestion',
+    component: GestionComponent
+  },
+  
+  {
     path: 'ressources/cantiques-chants',
     component: CantiquesChantsComponent
-
   },
 
   {
     path: 'ressources/ceremonies-evenement',
     component: CeremoniesEvenementComponent
-
+  },
+  {
+    path: 'ressources/ressource-ajout',
+    component: AjouterRessourceComponent
   },
   {
     path: 'mentions-legales',

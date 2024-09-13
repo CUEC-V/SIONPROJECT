@@ -206,6 +206,46 @@ namespace SION.Migrations
                     b.ToTable("ReseauxSociaux");
                 });
 
+            modelBuilder.Entity("SION.Models.Ressource", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Auteur")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Creation")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModification")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsPublie")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SousTitre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Titre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TypeRessource")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ressources");
+                });
+
             modelBuilder.Entity("SION.Models.MenuThematique", b =>
                 {
                     b.HasOne("SION.Models.Accueil", "Accueil")

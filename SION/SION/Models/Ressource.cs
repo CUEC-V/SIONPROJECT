@@ -20,5 +20,11 @@ namespace SION.Models
         public string? Description { get; set; }
 
         public DateTime Creation {  get; set; }
+
+        public DateTime DateModification { get; set; }
+
+        public string? TypeRessource { get; set; }
+
+        public bool IsPublie { get; set; }
     }
 }
