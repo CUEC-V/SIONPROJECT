@@ -2,7 +2,7 @@
 
 namespace SION.Models
 {
-    public class Ressource
+    public class RessourceDto
     {
         public int Id { get; set; }
 
@@ -10,7 +10,7 @@ namespace SION.Models
 
         public string? SousTitre { get; set; }
 
-        [Display(Name ="Provenance")]
+        [Display(Name = "Provenance")]
         public string? Auteur { get; set; }
 
         [DataType(DataType.ImageUrl)]
@@ -19,12 +19,13 @@ namespace SION.Models
         [DataType(DataType.Html)]
         public string? Description { get; set; }
 
-        public DateTime Creation {  get; set; }
+        public DateTime Creation { get; set; }
 
         public DateTime DateModification { get; set; }
 
         public string? TypeRessource { get; set; }
-
+        
         public bool IsPublie { get; set; }
+
     }
 }
