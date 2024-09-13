@@ -1,0 +1,18 @@
+<div *ngIf="ressource" class="card border-0 shadow vh-50">
+    <a href="https://www.youtube.com/watch?v={{ressource.id}}" target="_blank">
+        <img [src]="ressource.url" class="card-img-top" alt="..."></a>
+    <div class="card-body text-center">
+        <h5 class="card-title mb-0">
+            <a href="https://www.youtube.com/watch?v={{ressource.id}}">
+               <span class="d-block"> {{ressource.titre}}</span>
+               <span class="d-block"> {{ressource.titre}}</span>
+            </a>
+        </h5>
+       <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
+        <p><strong>Publiée le : </strong>{{ressource.creation| date:'dd-MM-yyyy hh:mm:ss'}}</p>
+    </div>
+    <div class="d-flex m-2 justify-content-center">
+<input type="button" class="m-2 bnt-action" value="+" title="Plus de détails">
+<input type="button" class="m-2 bnt-action" value="+" title="Modifier ou publier un témoignage">
+    </div>
+</div>
