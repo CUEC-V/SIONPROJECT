@@ -21,11 +21,10 @@ import { AdminGeneralComponent } from './admin-general/admin-general.component';
 import { AdminReseauSocialComponent } from './features/reseau-social/admin-reseau-social/admin-reseau-social.component';
 import { ReseauSocialComponent } from './features/reseau-social/reseau-social.component';
 import { MajComponent } from './features/reseau-social/maj/maj.component';
-ANIO/RESSOURCES/3
 import { AnnoncesDetailComponent } from './menu/ressources/pages/annonces-detail/annonces-detail.component';
 import { MessageListComponent } from './menu/services/nous-contacter/contact/message-list/message-list.component';
 import { MessageDetailComponent } from './menu/services/nous-contacter/contact/message-detail/message-detail.component';
-DEVELOP
+import { AjouterRessourceComponent } from './menu/ressources/ajouter-ressource/ajouter-ressource.component';
 
 export const routes: Routes = [
   {
@@ -81,8 +80,6 @@ export const routes: Routes = [
     component: AnnoncesComponent
 
   },
-
-  ANIO/RESSOURCES/3
     {
       path: 'ressources/annonces-detail',
       component: AnnoncesDetailComponent
@@ -92,12 +89,7 @@ export const routes: Routes = [
     {
       path: 'ressources/temoignages',
       component: TemoignagesComponent
-  {
-    path: 'ressources/temoignages',
-    component: TemoignagesComponent
- DEVELOP
-
-  },
+    },
 
   {
     path: 'ressources/cantiques-chants',
@@ -108,38 +100,10 @@ export const routes: Routes = [
   {
     path: 'ressources/ceremonies-evenement',
     component: CeremoniesEvenementComponent
-
-ANIO/RESSOURCES/3
-    },
-    {
-        path: 'mentions-legales',
-        component: MentionsLegalesComponent
-      },
-      {
-        path: 'tous-droits-reserves',
-        component: TousDroitsReservesComponent
-      },
-      {
-        path: 'admin-reseau-social',
-        component: AdminReseauSocialComponent
-      },
-      {
-        path: 'reseau-social',
-        component: ReseauSocialComponent
-      },
-      {
-        path: 'reseau-social/:id',
-        component: MajComponent
-      },
-      {
-        path: 'reseau-social/modifie/:id',
-        component: MajComponent
-    },
-    {
-        path: '**',
-        component: IntrouvableComponent
-    },
-
+  },
+  {
+    path: 'ressources/ressource-ajout',
+    component: AjouterRessourceComponent
   },
   {
     path: 'mentions-legales',
@@ -177,5 +141,4 @@ ANIO/RESSOURCES/3
     path: '**',
     component: IntrouvableComponent
   },
- DEVELOP
 ];
