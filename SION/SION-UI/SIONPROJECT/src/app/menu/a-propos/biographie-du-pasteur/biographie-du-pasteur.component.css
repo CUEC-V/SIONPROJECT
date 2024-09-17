@@ -8,3 +8,7 @@ p{
   text-align: justify;
   text-justify: inter-word;
 }
+image{
+  width: 50%;
+  height: 30%;
+}
