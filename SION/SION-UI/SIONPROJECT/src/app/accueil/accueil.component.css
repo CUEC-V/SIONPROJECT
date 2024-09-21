@@ -13,9 +13,7 @@
 }
 
 .image-ajuster-small {
-    height: 400px;
-    width: 68%;
-    text-align: center;
+    height: 350px;
 }
 
 .justify {
@@ -72,4 +70,8 @@
 .btn-ressource:hover {
     background-color: rgb(151, 214, 226);
     color: black;
+}
+
+.hr-s {
+    border: solid 3px lightgray;
 }

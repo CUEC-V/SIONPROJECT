@@ -1,49 +1,59 @@
 <div *ngIf="accueil" class="d-block m-2 ft-bg">
-    <div class="row m-2 p-2">
-        <div class="col-sm-8">{{accueil.accueil.nomEglise}}</div>
-        <div class="col-sm-4">Plan du site web</div>
-    </div>
-    <div class="row m-2 p-2">
-        <div class="col-sm-3">
-            <span class="d-block">{{accueil.accueil.numeroLibelleAdresse}}</span>
-            <span class="d-block">{{accueil.accueil.codePostaleVillePays}}</span>
 
-            <span class="d-block mt-2">Téléphone : {{accueil.accueil.numeroTelephone}}</span>
-            <h3 class="mt-2">Nos réseaux sociaux</h3>
-            <ul *ngIf="accueil.reseauxSociaux">
-              <li  *ngFor="let r of accueil.reseauxSociaux">{{r.urlImage}}</li>
-            </ul>
+    <div class="row m-2 p-2">
+        <div class="col-sm-3 align-content-center text-uppercase">
+            {{accueil.accueil.nomEglise}} <i class="fa fa-caret-right"></i>
         </div>
+
         <div class="col-sm-3">
-            <h3 class="m-0">Ouverture des portes</h3>
+            <b class="d-block foot-title">Nous contacter</b>
+            <span class="d-block"><i class="fa fa-map-marker"></i>&nbsp;{{accueil.accueil.numeroLibelleAdresse}} {{accueil.accueil.codePostaleVillePays}}</span>
+            <span class="d-block mt-2"><i class="fa fa-phone"></i>&nbsp;{{accueil.accueil.numeroTelephone}}</span>
+            <b class="d-block foot-title">Ouverture des portes</b>
             <span class="d-block mt-2">{{accueil.accueil.premierJourCulte}}</span>
             <span class="d-block">{{accueil.accueil.deuxiemeJourCulte}}</span>
             <span class="d-block">{{accueil.accueil.troisiemeJourCulte}}</span>
             <span class="d-block">{{accueil.accueil.autreJoureCulte}}</span>
         </div>
-        <div class="col-sm-2">
-            <img class="container" src="assets/accueil/chandelier.PNG" />
+        <div class="col-sm-3">
+            <b class="d-block m-2 foot-title">Découvrez-nous !</b>
+            <span *ngFor="let r of accueil.reseauxSociaux" class="m-2 p-2 border rounded-circle"
+                [innerHTML]="r.urlImage" title="{{r.description}}"></span>
+            <span class="d-block m-2"><i class="fa fa-music"></i> Music</span>
+            <span class="d-block m-2"><i class="fa fa-book"></i> Lecture</span>
+            <span class="d-block m-2"><i class="fa fa-calendar"> Calendrier</i></span>
+
+            <iframe width="450" height="250" frameborder="0" style="border:0"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place
+                ?key={{keyAPI}}
+                &q=Eiffel+Tower,Paris+France" allowfullscreen>
+            </iframe>
         </div>
-        <div class="col-sm-4">
-            <h3>Accueil</h3>
-            <h3>A propos</h3>
+
+        <div class="col-sm-3">
+            <b class="d-block m-2 foot-title">Plan du site</b>
+            <span class="d-block m-2">Accueil</span>
+            <span class="d-block m-2">A propos</span>
             <ul>
-                <li>Qui sommes-nous ?</li>
+                <li>Qui sommes-nous</li>
                 <li>Bibliographie du pasteur</li>
                 <li>Les offices</li>
             </ul>
-            <h3>Prédications</h3>
-            <h3>Services</h3>
+            <span class="d-block m-2">Prédications</span>
+            <span class="d-block m-2">Service</span>
             <ul>
                 <li>Nous réjoindre</li>
                 <li>Nous contacter</li>
             </ul>
-            <h3>Ressources</h3>
+            <span class="d-block m-2">Ressources</span>
         </div>
     </div>
     <div class="row m-0 footer-bg align-content-center">
-        <div class="col-sm-4"><a routerLink="/"> &copy;{{pat_date_creation}} - {{date |date:'yyyy'}} {{accueil.accueil.nomEglise}}</a></div>
-        <div class="col-sm-4"><a routerLink="/mentions-legales">Mentions légales</a></div>
-        <div class="col-sm-4"><a routerLink="/tous-droits-reserves">Tous droits réservés</a></div>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-2"><a routerLink="/"> &copy;{{pat_date_creation}} - {{date |date:'yyyy'}} PAT</a></div>
+        <div class="col-sm-2 border-start text-center"><a routerLink="/mentions-legales">Mentions légales</a></div>
+        <div class="col-sm-2 border-start text-center"><a routerLink="/tous-droits-reserves">Tous droits réservés</a></div>
+        <div class="col-sm-3"></div>
     </div>
 </div>

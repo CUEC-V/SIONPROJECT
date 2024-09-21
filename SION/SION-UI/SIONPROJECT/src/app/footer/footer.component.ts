@@ -17,6 +17,7 @@ export class FooterComponent implements OnInit{
   accueils: Accueil[] | undefined;
   date!:Date;
   pat_date_creation:string = Configuration.PAT_DATE_CREATION;
+  keyAPI : string = Configuration.Youtube_API_KEY;
   
   constructor(private footerService: FooterService) { }
 
