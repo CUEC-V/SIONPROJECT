@@ -18,12 +18,14 @@ export class AdminComponent implements OnInit {
   isImageAigle: boolean = false;
   isAdresse: boolean = false;
   isHorairesOuverture: boolean = false;
+  isEmblemeRessourceOrdre: boolean = false;
   isVideoPAT: boolean = false;
 
   information: string = '+ Informations générales';
   imageAigle: string = '+ Image de l\'aigle';
   adresse: string = '+ Adresse';
   horairesOuverture: string = '+ Horaires d\'ouverture';
+  emblemeRessourceOrdre: string = '+ Emblèmes et mémoriaux, ressources et ordre';
   videoPAT: string = '+ Vidéo de la Pierre Angulaire Tabernacle';
 
   accueil!: AccueilModel;
@@ -52,6 +54,17 @@ export class AdminComponent implements OnInit {
     deuxiemeJourCulte: new FormControl('', [Validators.required, Validators.minLength(3)]),
     troisiemeJourCulte: new FormControl('', [Validators.required, Validators.minLength(3)]),
     autreJoureCulte: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    /* Emblèmes et mémoriaux */
+    ordreEglise1: new FormControl(''),
+    ordreEglise2: new FormControl(''),
+    ordreEglise3: new FormControl(''),
+    ordreEgliseTitre: new FormControl(''),
+    ordreEgliseSousTitre: new FormControl(''),
+    ressourceTitre: new FormControl(''),
+    ressourceSousTitre: new FormControl(''),
+    emblemeMemorialTitre: new FormControl(''),
+    emblemeMemorialSousTitre: new FormControl(''),
+    crucifixTexte: new FormControl('')
   })
 
   nomEgliseMessage: string = Message.NomEglise;
@@ -76,8 +89,8 @@ export class AdminComponent implements OnInit {
   troisiemeJourCulte: string = Message.TroisiemeJourCulte;
   autreJoureCulte: string = Message.AutreJoureCulte;
 
-
   constructor(private accueilService: AccueilService, private router: Router) { }
+  
   ngOnInit(): void {
     this.accueilService.getAccueil()
       .subscribe({
@@ -106,6 +119,9 @@ export class AdminComponent implements OnInit {
     } else if (g === "VI") {
       this; this.isVideoPAT = !this.isVideoPAT;
       this.videoPAT = !this.isVideoPAT ? `+ ${this.videoPAT.substring(1)} ` : `- ${this.videoPAT.substring(1)} `;
+    } else if (g === "EO") {
+      this.isEmblemeRessourceOrdre = ! this.isEmblemeRessourceOrdre; 
+      this.emblemeRessourceOrdre = !this.isEmblemeRessourceOrdre ? `+ ${this.emblemeRessourceOrdre.substring(1)} ` : `- ${this.emblemeRessourceOrdre.substring(1)} `;
     }
   }
 
@@ -134,6 +150,16 @@ export class AdminComponent implements OnInit {
         deuxiemeJourCulte: this.accueil.deuxiemeJourCulte,
         troisiemeJourCulte: this.accueil.troisiemeJourCulte,
         autreJoureCulte: this.accueil.autreJoureCulte,
+        ordreEglise1: this.accueil.ordreEglise1,
+        ordreEglise2: this.accueil.ordreEglise2,
+        ordreEglise3: this.accueil.ordreEglise3,
+        ordreEgliseTitre: this.accueil.ordreEgliseTitre,
+        ordreEgliseSousTitre: this.accueil.ordreEgliseSousTitre,
+        ressourceTitre: this.accueil.ressourceTitre,
+        ressourceSousTitre: this.accueil.ressourceSousTitre,
+        emblemeMemorialTitre: this.accueil.emblemeMemorialTitre,
+        emblemeMemorialSousTitre: this.accueil.emblemeMemorialSousTitre,
+        crucifixTexte :  this.accueil.crucifixTexte,      
       };
 
       this.accueilFormGroup.setValue(thisAccueil);
@@ -156,7 +182,7 @@ export class AdminComponent implements OnInit {
 
     } else {
       // Update data here !
-      this.accueilService.modifier(acc.id,acc).subscribe({
+      this.accueilService.modifier(acc.id, acc).subscribe({
         next: a => {
           console.log('Insertion réussie')
           this.router.navigate(['/']);

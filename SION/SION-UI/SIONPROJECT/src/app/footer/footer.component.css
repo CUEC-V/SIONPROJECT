@@ -1,15 +1,50 @@
 .ft-bg {
-    background-color: rgba(31, 76, 96, 0.3);
+    background-color: #292e36;
+    color: wheat;
 }
 
 .footer-bg {
-    background-color: aqua;
+    background-color: #1e2228;
+    color: wheat;
     height: 90px;
 }
 
 .footer-bg div a {
     text-decoration: none;
 }
+
 .footer-bg div a:hover {
     text-decoration: underline;
+}
+
+.foot-title {
+    color: white;
+}
+
+.location {
+    display: inline-block;
+    padding-left: 30px;
+}
+
+.location:after {
+    content: '';
+    background: red;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    border-radius: 50% 50% 50% 0%;
+    transform: rotate(-50deg);
+}
+
+.location:before {
+    content: '';
+    background: white;
+    width: 8px;
+    position: absolute;
+    height: 8px;
+    left: 16px;
+    border-radius: 50%;
+    top: 33px;
+    z-index: 1;
 }

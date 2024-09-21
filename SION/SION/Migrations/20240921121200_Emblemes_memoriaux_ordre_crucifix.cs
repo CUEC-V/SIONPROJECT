@@ -5,25 +5,25 @@
 namespace SION.Migrations
 {
     /// <inheritdoc />
-    public partial class IsPublishedColumn : Migration
+    public partial class Emblemes_memoriaux_ordre_crucifix : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<bool>(
-                name: "IsPublie",
-                table: "Ressources",
-                type: "bit",
+            migrationBuilder.AddColumn<string>(
+                name: "CrucifixTexte",
+                table: "Accueils",
+                type: "nvarchar(max)",
                 nullable: false,
-                defaultValue: false);
+                defaultValue: "");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "IsPublie",
-                table: "Ressources");
+                name: "CrucifixTexte",
+                table: "Accueils");
         }
     }
 }
