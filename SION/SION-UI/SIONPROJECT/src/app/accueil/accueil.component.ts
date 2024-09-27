@@ -4,11 +4,12 @@ import { AccueilService } from './service/accueil.service';
 import { Accueil } from './models/accueil';
 import { Unsubscribable } from 'rxjs';
 import { Configuration } from '../configuration';
+import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'accueil',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLinkWithHref],
   templateUrl: './accueil.component.html',
   styleUrl: './accueil.component.css'
 })

@@ -1,1 +1,43 @@
-<p>cantiques-chants works!</p>
+<div class="row">
+    <div class="ressource-presentation text-center">
+        <h2>Cantiques, adorations, louanges.</h2>
+        <h5  *ngIf="videos.length" class="p-3">Nous avons trouvé, {{videos.length}} cantiques (s),...  </h5>
+        <div  *ngIf="videos.length" class="m-2 p-1 afficher-plus" (click)="afficherplus(youtubeVideosNumber)">Afficher + </div>
+    </div>
+  </div>
+  <h4 (click)="toggle('Y')">{{youtube}}</h4>
+  <div *ngIf="isYoutube" class="row m-2">
+    <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-0 shadow vh-50">
+            <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+            <div class="card-body text-center">
+                <h5 class="card-title mb-0">
+                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
+                    </a>
+                </h5>
+               <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
+                <p><strong>Publiée le : </strong>{{video.snippet.publishTime | date:'dd-MM-yyyy hh:mm:ss'}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <h4 (click)="toggle('P')">{{publie}}</h4>
+  <div *ngIf="isPublie" class="row m-2">
+    <div *ngFor="let t of cantiques" class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-0 shadow vh-50">
+            <a href="https://www.youtube.com/watch?v={{t.id}}" target="_blank">
+                <img [src]="t.url" class="card-img-top" alt="..."></a>
+            <div class="card-body text-center">
+                <h5 class="card-title mb-0">
+                    <a href="https://www.youtube.com/watch?v={{t.id}}">{{t.titre}} <br/> {{t.sousTitre}}
+                    </a>
+                </h5>
+               <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
+                <p><strong>Publiée le : </strong>{{t.creation| date:'dd-MM-yyyy hh:mm:ss'}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  

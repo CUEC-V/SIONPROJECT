@@ -1,168 +1,42 @@
-
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-
-<div class="ressource-presentation text-center">
-  <h2>Les annonces</h2>
-</div>
-
-
-<h5 class="text-center">Sur cette page vous trouverez les annonces importantes de l'église.</h5>
-
-  <div class="container md-3">
-    <form class="d-flex" role="search" action="/">
-      <input class="form-control me-2" type="search" placeholder="Tapez votre recherche" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Recherche</button>
-    </form>
+<div class="row">
+  <div class="ressource-presentation text-center">
+      <h2>Annonces (s)</h2>
+      <h5  *ngIf="videos.length" class="p-3">Nous avons trouvé, {{videos.length}} élément(s)  </h5>
+      <div  *ngIf="videos.length" class="m-2 p-1 afficher-plus" (click)="afficherplus(youtubeVideosNumber)">Afficher + </div>
   </div>
-
-
-<div class="annonces-cards">
-<div class="row row-cols-1 row-cols-md-5 g-4">
-  <div class="col">
-    <div class="card h-70">
-      <a routerLink="/ressources/annonces-detail">
-        <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/img-annonces/annonces.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Annonces pour le mois de juillet</h5>
+</div>
+<h4 (click)="toggle('Y')">{{youtube}}</h4>
+<div *ngIf="isYoutube" class="row m-2">
+  <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow vh-50">
+          <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+              <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+          <div class="card-body text-center">
+              <h5 class="card-title mb-0">
+                  <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
+                  </a>
+              </h5>
+             <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
+              <p><strong>Publiée le : </strong>{{video.snippet.publishTime | date:'dd-MM-yyyy hh:mm:ss'}}</p>
           </div>
-        </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">publié le 30 juin 2024</small>
       </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-70">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/annonce.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois d'Août</h5>
-      </div>
-    </a>
-
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card h-100">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/img-annonces/annonces.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois de Septembre</h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card h-100">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/annonce.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois de Octobre</h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card h-100">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/img-annonces/annonces.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois de Octobre</h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/annonce.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois de Octobre</h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card h-100">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/img-annonces/annonces.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois de Octobre</h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col">
-    <div class="card h-100">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/annonce.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois de Octobre</h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/img-annonces/annonces.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces pour le mois de Octobre</h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="card h-90">
-      <a routerLink="/ressources/annonces-detail">
-      <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/annonce.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Annonces du mois de Novembre </h5>
-      </div>
-    </a>
-      <div class="card-footer">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </div>
-
-
-    </div>
   </div>
 </div>
 
-</div>
-
-<div class="d-flex justify-content-center p-3">
-  <a routerLink="/ressources/voir-toutes-les-pages" class="btn-annonce">Retour</a>
+<h4 (click)="toggle('P')">{{publie}}</h4>
+<div *ngIf="isPublie" class="row m-2">
+  <div *ngFor="let t of annonces" class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow vh-50">
+          <a href="https://www.youtube.com/watch?v={{t.id}}" target="_blank">
+              <img [src]="t.url" class="card-img-top" alt="..."></a>
+          <div class="card-body text-center">
+              <h5 class="card-title mb-0">
+                  <a href="https://www.youtube.com/watch?v={{t.id}}">{{t.titre}} <br/> {{t.sousTitre}}
+                  </a>
+              </h5>
+             <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
+              <p><strong>Publiée le : </strong>{{t.creation| date:'dd-MM-yyyy hh:mm:ss'}}</p>
+          </div>
+      </div>
+  </div>
 </div>

@@ -12,9 +12,15 @@ import { Ressource } from '../models/ressource-model';
   styleUrl: './temoignages.component.css'
 })
 export class TemoignagesComponent implements OnInit, OnDestroy {
+
   videos: any[] = [];
   temoignes: Ressource[] = [];
   youtubeVideosNumber: number = 1;
+
+  youtube: string = '- Témoignages depuis Youtube';
+  isYoutube: boolean = true;
+  isPublie: boolean = false;
+  publie: string = "+ Témoignages écrits et publiés";
 
   constructor(private ressourceService: RessourceService) { }
 
@@ -32,7 +38,7 @@ export class TemoignagesComponent implements OnInit, OnDestroy {
 
     this.ressourceService.getRessources()
       .subscribe({
-        next: temoignes => { this.temoignes = temoignes;console.log("Ressources - temoignages ==>"); console.log(this.temoignes) },
+        next: temoignes => { this.temoignes = temoignes; console.log("Ressources - temoignages ==>"); console.log(this.temoignes) },
         error: err => console.log(err)
       })
   }
@@ -48,12 +54,22 @@ export class TemoignagesComponent implements OnInit, OnDestroy {
       })
   }
 
+  toggle(g: string) {
+    if (g === "Y") {
+      this.isYoutube = !this.isYoutube;
+      this.youtube = !this.isYoutube ? "+ Témoignages depuis Youtube" : "- Témoignages depuis Youtube";
+    } else if (g === "P") {
+      this.isPublie = !this.isPublie;
+      this.publie = this.isPublie ? "- Témoignages écrits et publiés" : "+ Témoignages écrits et publiés";
+    }
+  }
+
   ngOnDestroy(): void {
     if (this.videos.length) {
       this.videos = [];
     }
 
-    if(this.temoignes.length){
+    if (this.temoignes.length) {
       this.temoignes = [];
     }
   }
