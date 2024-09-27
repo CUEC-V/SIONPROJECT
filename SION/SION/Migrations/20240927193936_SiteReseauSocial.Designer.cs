@@ -12,8 +12,8 @@ using SION.DbData;
 namespace SION.Migrations
 {
     [DbContext(typeof(SionContext))]
-    [Migration("20240913183156_IsPublishedColumn")]
-    partial class IsPublishedColumn
+    [Migration("20240927193936_SiteReseauSocial")]
+    partial class SiteReseauSocial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -41,7 +41,19 @@ namespace SION.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CrucifixTexte")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("DeuxiemeJourCulte")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmblemeMemorialSousTitre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmblemeMemorialTitre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -81,7 +93,35 @@ namespace SION.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("OrdreEglise1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrdreEglise2")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrdreEglise3")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrdreEgliseSousTitre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrdreEgliseTitre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PremierJourCulte")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RessourceSousTitre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RessourceTitre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -195,6 +235,10 @@ namespace SION.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Site")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

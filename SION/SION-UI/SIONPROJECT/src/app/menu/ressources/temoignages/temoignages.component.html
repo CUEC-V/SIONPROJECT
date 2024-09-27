@@ -5,8 +5,8 @@
         <div  *ngIf="videos.length" class="m-2 p-1 afficher-plus" (click)="afficherplus(youtubeVideosNumber)">Afficher + </div>
     </div>
 </div>
-
-<div class="row m-2">
+<h4 (click)="toggle('Y')">{{youtube}}</h4>
+<div *ngIf="isYoutube" class="row m-2">
     <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow vh-50">
             <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
@@ -23,7 +23,8 @@
     </div>
 </div>
 
-<div class="row m-2">
+<h4 (click)="toggle('P')">{{publie}}</h4>
+<div *ngIf="isPublie" class="row m-2">
     <div *ngFor="let t of temoignes" class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow vh-50">
             <a href="https://www.youtube.com/watch?v={{t.id}}" target="_blank">

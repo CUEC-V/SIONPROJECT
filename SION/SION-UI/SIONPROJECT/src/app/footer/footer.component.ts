@@ -8,16 +8,17 @@ import { RouterLinkWithHref } from '@angular/router';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule,RouterLinkWithHref],
+  imports: [CommonModule, RouterLinkWithHref],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent implements OnInit{
+export class FooterComponent implements OnInit {
   accueil: Accueil | undefined;
   accueils: Accueil[] | undefined;
-  date!:Date;
-  pat_date_creation:string = Configuration.PAT_DATE_CREATION;
-  
+  date!: Date;
+  pat_date_creation: string = Configuration.PAT_DATE_CREATION;
+  keyAPI: string = Configuration.Youtube_API_KEY;
+
   constructor(private footerService: FooterService) { }
 
   ngOnInit(): void {

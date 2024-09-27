@@ -64,6 +64,37 @@ namespace SION.Models
         public string ImageChandelier { get; set; }
 
         #endregion
+
+        #region : orde de l'église
+        public string OrdreEglise1 { get; set; }
+
+        public string OrdreEglise2 { get; set; }
+
+        public string OrdreEglise3 { get; set; }
+
+        public string OrdreEgliseTitre { get; set; }
+
+        public string OrdreEgliseSousTitre { get; set; }
+        #endregion
+
+        #region : Ressources
+
+        public string RessourceTitre { get; set; }
+
+        public string RessourceSousTitre { get; set; }
+
+        #endregion
+
+        #region : Emblèmes et mémoriaux
+
+        public string EmblemeMemorialTitre { get; set; }
+
+        public string EmblemeMemorialSousTitre { get; set; }
+
+        public string CrucifixTexte { get; set; }
+
+        #endregion
+
         public virtual ICollection<ReseauxSociaux> ReseauxSociauxes { get; set; }
         public virtual ICollection<MenuThematique> MenuThematiques { get; set; }
     }

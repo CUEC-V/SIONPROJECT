@@ -11,6 +11,8 @@ namespace SION.Models
 
         public string Description { get; set; }
 
+        public string Site {  get; set; }
+
         public Accueil Accueil { get; set; }
 
         public int AccueilId { get; set; }

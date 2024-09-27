@@ -15,8 +15,10 @@ import { CommonModule } from '@angular/common';
 export class MajComponent implements OnInit {
 
   reseauSocial!: any;
-  reseauSocialFormGroup = new FormGroup({ id : new FormControl(0),
+  reseauSocialFormGroup = new FormGroup({
+    id: new FormControl(0),
     urlImage: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    site: new FormControl('', [Validators.required, Validators.minLength(2)]),
     description: new FormControl('', [Validators.required, Validators.minLength(10)]),
     accueilId: new FormControl(1),
   });
@@ -24,7 +26,7 @@ export class MajComponent implements OnInit {
   constructor(private reseauSocialService: ReseauSocialService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    let id = Number(this.route.snapshot.paramMap.get('id')) ;
+    let id = Number(this.route.snapshot.paramMap.get('id'));
 
     if (isNaN(id)) {
       this.router.navigate(['/reseauxSocial']);
@@ -42,19 +44,18 @@ export class MajComponent implements OnInit {
 
   onSubmit() {
     var form = this.reseauSocialFormGroup.value;
-    console.log(form);
 
     this.reseauSocialService.maj(form)
-    .subscribe({
-      next: r => {
-        this.reseauSocial = r;
-        if (!this.reseauSocial) {
+      .subscribe({
+        next: r => {
+          this.reseauSocial = r;
+          if (!this.reseauSocial) {
+            this.router.navigate(['/reseau-social']);
+          }
+          window.confirm('MAJ réussie ! ');
           this.router.navigate(['/reseau-social']);
-        }
-        alert('MAJ réussie ! ');
-        this.router.navigate(['/reseau-social']);
-      },
-      error:err => console.log(err)
-    });
+        },
+        error: err => console.log(err)
+      });
   }
 }

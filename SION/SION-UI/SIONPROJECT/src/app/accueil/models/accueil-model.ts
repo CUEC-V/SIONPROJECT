@@ -1,6 +1,6 @@
 export interface AccueilModel {
     id: number;
-    
+
     nomEglise: string;
 
     texteIntroductif: string;
@@ -47,4 +47,24 @@ export interface AccueilModel {
     autreJoureCulte: string;
 
     imageChandelier: string;
+
+    ordreEglise1: string;
+
+    ordreEglise2: string;
+
+    ordreEglise3: string;
+
+    ordreEgliseTitre: string;
+
+    ordreEgliseSousTitre: string;
+
+    ressourceTitre: string;
+
+    ressourceSousTitre: string;
+
+    emblemeMemorialTitre: string;
+
+    emblemeMemorialSousTitre: string;
+
+    crucifixTexte: string;
 }

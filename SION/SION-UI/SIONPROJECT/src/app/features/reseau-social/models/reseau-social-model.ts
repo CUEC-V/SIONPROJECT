@@ -6,4 +6,6 @@ export interface ReseauSocialModel {
     description: string;
 
     accueilId: number;
+
+    site: string;
 }

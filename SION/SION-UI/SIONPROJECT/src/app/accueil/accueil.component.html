@@ -1,106 +1,150 @@
+<div  *ngIf="accueil"  class="row m-5">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+    <h2 *ngIf="accueil.accueil" class="text-center">{{accueil.accueil.emblemeMemorialTitre}} </h2>
+    <hr class="d-flex m-2 hr-s justify-content-center" />
+    <p  *ngIf="accueil.accueil"  class="text-center">
+      {{accueil.accueil.emblemeMemorialSousTitre}}
+    </p>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
 <!-- Block 1-->
 <div *ngIf="accueil">
   <div *ngIf="accueil.accueil" class="row m-3">
-    <div [innerHTML]="accueil.accueil.texteIntroductif" class="col-sm-6 p-3 text-justify bg-dark-subtle paragraphe"></div>
+    <div [innerHTML]="accueil.accueil.texteIntroductif" class="col-sm-6 p-3 text-justify bg-dark-subtle paragraphe">
+    </div>
     <img class="col-sm-2" src="assets/accueil/ange-du-seigneur.PNG" />
     <img class="col-sm-2" src="assets/accueil/la-nuee.PNG" />
     <img class="col-sm-2" src="assets/accueil/offman.PNG" />
   </div>
   <div class="d-flex m-2 justify-content-end">
-    <ul *ngFor="let reseau of reseaux">
-      <li><a href="#"><img src="{{reseau}}"></a></li>
-    </ul>
+    <span *ngFor="let r of accueil.reseauxSociaux" class="m-2 p-2"
+    [innerHTML]="r.urlImage" title="{{r.description}}"></span>
   </div>
 
   <!--Block 2-->
   <div class="row">
     <div class="col-sm-4">
-      <div class="d-flex m-2 text-center bienvenu-sion">
-        <h5 [innerHTML]="accueil.accueil.texteBienvenu"></h5>
+      <div class="d-flex m-2 bienvenu-sion">
+        <h5 class="text-justify" [innerHTML]="accueil.accueil.texteBienvenu"></h5>
       </div>
     </div>
-    <div class="col-sm-4"></div>
+    <div class="col-sm-4 text-center"><img class="col-sm-4" src="assets/accueil/crucifix.jpg" />
+      <span class="d-block text-center">{{accueil.accueil.crucifixTexte}}</span>
+    </div>
     <img class="col-sm-4" src="assets/accueil/image-aigle.PNG" />
   </div>
 
   <!--Block 3-->
-  <div class="row  m-2">
+  <div class="row border m-2">
     <div class="col-sm-4">
-      <img class="image-ajuster-small" src="assets/accueil/image-pasteur.PNG" />
+      <img class="image-ajuster-small container" src="assets/accueil/image-pasteur.PNG" />    
     </div>
-    <div class="col-sm-4">
-      <div class="m-2 justify" [innerHTML]="accueil.accueil.texteHaut"></div>
+    <div class="col-sm-4 border">
       <div *ngIf="videoPasteur" class="m-2 border-0 shadow vh-50">
-        <a href="https://www.youtube.com/watch?v={{videoPasteur.id.videoId}}" target="_blank">
+        <a href="https://www.youtube.com/watch?v={{videoPasteur.videoId}}" target="_blank">
           <img class="col-sm-12" [src]="videoPasteur.snippet.thumbnails.medium.url" alt="..."></a>
       </div>
-      <div class="m-2 justify" [innerHTML]="accueil.accueil.textBas"></div>
+      <div class="m-2 text-center" [innerHTML]="accueil.accueil.textBas"></div>
+      <div class="card-body text-center">
+        <h5 class="card-title mb-0">
+            <a *ngIf="videoPasteur && videoPasteur.id" href="https://www.youtube.com/watch?v={{videoPasteur.id.videoId}}">{{videoPasteur.snippet?.title}}
+            </a>
+        </h5>
+        <p><strong>Publiée le : </strong>{{videoPasteur?.snippet?.publishTime | date:'dd-MM-yyyy hh:mm:ss'}}</p>
     </div>
-    <div class="col-sm-4 justify" [innerHTML]="accueil.accueil.texteProphete"></div>
+    </div>
+    <div class="col-sm-4 border justify" [innerHTML]="accueil.accueil.texteProphete"></div>
   </div>
 
-  <div class="container_ressources d-flex justify-content-around bg-light bg-opacity-22">
-    <div class="row m-5">
-      <div class="col-sm-3">
-        <div class="card">
-          <a routerLink="/ressources/annonces" class="">
-            <div class="card-body text-center">
-              <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/img-annonces/annonce.jpg"
-                alt="Card image cap">
+  <div class="row m-5">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h2 class="text-center">{{accueil.accueil.ressourceTitre}}</h2>
+      <hr class="d-flex m-2 hr-s justify-content-center" />
+      <p class="text-center">{{accueil.accueil.ressourceSousTitre}}
+      </p>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
 
-                <img class="card-img-top" style="height: 200px;" src="assets/"
-                alt="Card image cap">
-              <h6 class="card-title text-center p-3">Les annonces</h6>
-              <p class="card-text p-1">Toutes les annonces de notre église.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <a href="#" class="">
-            <div class="card-body text-center">
-              <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/cant.jpg"
-                alt="Card image cap">
-              <h6 class="card-title text-center p-2">Cantiques,adorations, louanges</h6>
-              <p class="card-text col 12">“Louez Dieu dans son sanctuaire! Louez-le dans l’étendue, où éclate sa
-                puissance !
-                2 Louez-le pour ses hauts faits! Louez-le selon l'immensité de sa grandeur! ” -Psaumes 150 </p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="col-sm-3 sm-3">
-        <div class="card">
-          <a href="#" class="">
-            <div class="card-body text-center">
-              <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/chainbroken.jpg"
-                alt="Card image cap">
-              <h6 class="card-title text-center p-2">Les témoignages</h6>
-              <p class="card-text col-12">Voici les miracles qui accompagneront ceux qui auront cru: en mon nom,
-                ils chasseront les démons; ils parleront de nouvelles langues;ils saisiront des serpents;
-                s'ils boivent quelque breuvage mortel, il ne leur fera point de mal; ils imposeront les mains aux
-                malades,
-                et les malades, seront guéris.</p>
 
-            </div>
-          </a>
-        </div>
+  <div class="row m-1">
+    <div class="col-sm-3">
+      <div class="card">
+        <a routerLink="/ressources/annonces">
+          <div class="card-body text-center">
+            <img class="card-img-top" style="height: 200px;"
+              src="assets/images_provisoire_ressource/annonce.jpg" alt="Card image cap">
+            <h6 class="card-title text-center p-3">Les annonces</h6>
+            <p class="card-text p-1">Toutes les annonces de notre église.</p>
+          </div>
+        </a>
       </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <a href="#" class="">
-            <div class="card-body text-center">
-              <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/wedding.jpg"
-                alt="Card image cap">
-              <h6 class="card-title text-center p-2">Cérémonies, baptêmes, événements, photos, vidéos etc.</h6>
-              <p class="card-text col 12">Vous trouverez toutes les informations concernant les événements organisés à
-                l’église.</p>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <a href="/ressources/cantiques-chants">
+          <div class="card-body text-center">
+            <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/cant.jpg"
+              alt="Card image cap">
+            <h6 class="card-title text-center p-2">Cantiques,adorations, louanges</h6>
+            <p class="card-text col 12">“Louez Dieu dans son sanctuaire! Louez-le dans l’étendue, où éclate sa
+              puissance !
+              2 Louez-le pour ses hauts faits! Louez-le selon l'immensité de sa grandeur! ” -Psaumes 150 </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <a routerLink="/ressources/temoignages">
+          <div class="card-body text-center">
+            <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/chainbroken.jpg"
+              alt="Card image cap">
+            <h6 class="card-title text-center p-2">Les témoignages</h6>
+            <p class="card-text col-12">Voici les miracles qui accompagneront ceux qui auront cru: en mon nom,
+              ils chasseront les démons; ils parleront de nouvelles langues;ils saisiront des serpents;
+              s'ils boivent quelque breuvage mortel, il ne leur fera point de mal; ils imposeront les mains aux
+              malades,
+              et les malades, seront guéris.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="card">
+        <a href="/ressources/ceremonies-evenement">
+          <div class="card-body text-center">
+            <img class="card-img-top" style="height: 200px;" src="assets/images_provisoire_ressource/img-mariages/wedding.jpg"
+              alt="Card image cap">
+            <h6 class="card-title text-center p-2">Cérémonies, baptêmes, événements, photos, vidéos etc.</h6>
+            <p class="card-text col 12">Vous trouverez toutes les informations concernant les événements organisés à
+              l’église.</p>
 
-            </div>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="row m-5">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h2 class="text-center">{{accueil.accueil.ordreEgliseTitre}}</h2>
+      <hr class="d-flex m-2 hr-s justify-content-center" />
+      <p class="text-center">
+        {{accueil.accueil.ordreEgliseSousTitre}}</p>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+
+  <div class="d-flex m-2 justify-content-around bd-h-48">
+    {{accueil.accueil.ordreEglise1}}
+    <div class="vr m-3"></div>
+    {{accueil.accueil.ordreEglise2}}
+    <div class="vr m-3"></div>
+    {{accueil.accueil.ordreEglise3}}
+  </div>
