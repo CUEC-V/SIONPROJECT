@@ -12,6 +12,7 @@ namespace SION.Models.Mapper
                 UrlImage = reseauxSocial.UrlImage,
                 AccueilId = reseauxSocial.AccueilId,
                 Description = reseauxSocial.Description,
+                Site = reseauxSocial.Site,
             };
         }
 
@@ -23,6 +24,7 @@ namespace SION.Models.Mapper
                 UrlImage = reseauxSocial.UrlImage,
                 AccueilId = reseauxSocial.AccueilId,
                 Description = reseauxSocial.Description,
+                Site = reseauxSocial.Site
             };
         }
 
@@ -35,6 +37,7 @@ namespace SION.Models.Mapper
                 UrlImage = reseauxSocial.UrlImage,
                 AccueilId = reseauxSocial.AccueilId,
                 Description = reseauxSocial.Description,
+                Site = reseauxSocial.Site,
             };
         }
         public static List<ReseauxSociauxDto> Map(this List<ReseauxSociaux> reseauxSociauxes)

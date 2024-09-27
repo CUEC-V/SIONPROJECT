@@ -11,6 +11,13 @@
             </div>
 
             <div class="form-group">
+                <label for="site" class="control-label m-1">Le site du réseau social</label>
+                <input formControlName="site" class="form-control" />
+                <span *ngIf="reseauSocialFormGroup.get('site')?.invalid" class="text-danger"> Le site est
+                    obligatoire</span>
+            </div>
+
+            <div class="form-group">
                 <label for="texteIntroductif" class="control-label m-1">Description</label>
                 <input formControlName="description" class="form-control" />
                 <span *ngIf="reseauSocialFormGroup.get('description')?.invalid" class="text-danger">Description est

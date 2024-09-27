@@ -9,6 +9,8 @@ namespace SION.Models.Dto
         [DataType(DataType.Html)]
         public string UrlImage { get; set; }
 
+        public string Site { get; set; } 
+
         public string Description { get; set; }
 
         public int AccueilId { get; set; }

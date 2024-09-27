@@ -7,6 +7,10 @@
         /// 
         /// </summary>
         public string UrlImage { get; set; }
+
+        public string Site { get; set; }
+
+
         /// <summary>
         /// 
         /// </summary>

@@ -16,6 +16,7 @@ export class AdminReseauSocialComponent {
   reseauSocialFormGroup = new FormGroup({
     id : new FormControl(0),
     urlImage: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    site: new FormControl('', [Validators.required, Validators.minLength(4)]),
     description: new FormControl('', [Validators.required, Validators.minLength(10)]),
     accueilId: new FormControl(1),
   });
@@ -27,7 +28,7 @@ export class AdminReseauSocialComponent {
 
     this.reseauSociauxService.creer(rs).subscribe({
       next: a => {
-        console.log('Insertion réussie')
+        window.confirm('Insertion réussie');
         this.router.navigate(['/']);
       },
       error: err => console.log(err)
