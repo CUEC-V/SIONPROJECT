@@ -1,5 +1,5 @@
 .bienvenu-sion {
-    color:#FF7E05;
+    color: #FF7E05;
 }
 
 .logo {
@@ -15,4 +15,9 @@
 
 .bg-light-a {
     background-color: rgba(211, 227, 232, 0.3);
+}
+
+.defer {
+    background-color: #1e2228;
+    color: wheat;
 }

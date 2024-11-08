@@ -20,9 +20,6 @@ export class FooterService {
 
   private handleError(err: HttpErrorResponse) {
     let errorMessage = '';
-    console.log(err);
-    console.log('===> '+err.type);
-  
       errorMessage = `Server returned message / code : ${err.message} / ${err.status}, error message is : ${err.message}`;
 
     console.error(errorMessage);

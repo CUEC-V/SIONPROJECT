@@ -35,7 +35,7 @@ export class CeremoniesEvenementComponent implements OnInit, OnDestroy {
       }
       )
 
-    this.ressourceService.getRessources()
+    this.ressourceService.getRessources('E')
       .subscribe({
         next: ceremonies => { this.ceremonies = ceremonies; },
         error: err => console.log(err)

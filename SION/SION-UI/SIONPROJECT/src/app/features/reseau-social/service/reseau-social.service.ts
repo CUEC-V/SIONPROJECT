@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReseauSocialModel } from '../models/reseau-social-model';
 import { Configuration } from '../../../configuration';
-import { Observable, catchError, tap, throwError } from 'rxjs';
+import { Observable, catchError, of, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +34,14 @@ export class ReseauSocialService {
       tap(c => console.log(c)),
       catchError(this.handleError));
   }
+
+  delete(id: string): Observable<ReseauSocialModel[]> {
+    let route = `${Configuration.UrlApi}/ReseauxSocial/delete/${id}`;
+    return this.http.delete<ReseauSocialModel[]>(route).pipe(
+      tap(c => console.log(c)),
+      catchError(this.handleError));
+  }
+
   //maj = mise à jours
   maj(i: any): Observable<any> {
     let cons = `${Configuration.UrlApi}/ReseauxSocial/modifie`;

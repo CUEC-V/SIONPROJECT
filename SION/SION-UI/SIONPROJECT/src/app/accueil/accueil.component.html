@@ -20,8 +20,9 @@
     <img class="col-sm-2" src="assets/accueil/offman.PNG" />
   </div>
   <div class="d-flex m-2 justify-content-end">
-    <span *ngFor="let r of accueil.reseauxSociaux" class="m-2 p-2"
-    [innerHTML]="r.urlImage" title="{{r.description}}"></span>
+    <a *ngFor="let r of accueil.reseauxSociaux" href="{{r.site}}">
+    <span class="m-2 p-2"
+    [innerHTML]="r.urlImage" title="{{r.description}}"></span></a>
   </div>
 
   <!--Block 2-->

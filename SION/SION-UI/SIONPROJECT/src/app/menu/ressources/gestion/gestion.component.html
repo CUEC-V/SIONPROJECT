@@ -1,29 +1,34 @@
 <div class="row">
     <div class="ressource-presentation text-center">
-        <h2>Liste de témoignages écrits Publiés ou en instance de publication</h2>
-        <h5  *ngIf="videos.length" class="p-3">Nous avons trouvé, {{videos.length}} prédication(s)  </h5>
-        <div  *ngIf="videos.length" class="m-2 p-1 afficher-plus" (click)="afficherplus(youtubeVideosNumber)">Afficher + </div>
+        <h2>Liste de ressources écrites Publiées ou en instance de publication</h2>
+        <h5 *ngIf="videos.length" class="p-3">Nous avons trouvé, {{videos.length}} ressource(s) </h5>
+        <div *ngIf="videos.length" class="m-2 p-1 afficher-plus" (click)="afficherplus(youtubeVideosNumber)">Afficher +
+        </div>
     </div>
 </div>
-
-<div class="row m-2">
-    <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
-        <div class="card border-0 shadow vh-50">
-            <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
-                <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
-            <div class="card-body text-center">
-                <h5 class="card-title mb-0">
-                    <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
-                    </a>
-                </h5>
-               <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
-                <p><strong>Publiée le : </strong>{{video.snippet.publishTime | date:'dd-MM-yyyy hh:mm:ss'}}</p>
+<h4 (click)="toggle('Y')">{{youtube}}</h4>
+<div>
+    <div *ngIf="isYoutube" class="row m-2">
+        <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-0 shadow vh-50">
+                <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
+                    <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-0">
+                        <a href="https://www.youtube.com/watch?v={{video.id.videoId}}">{{video.snippet.title}}
+                        </a>
+                    </h5>
+                    <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>-->
+                    <p><strong>Publiée le : </strong>{{video.snippet.publishTime | date:'dd-MM-yyyy hh:mm:ss'}}</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="row m-2">
+
+<h4 (click)="toggle('P')">{{publie}}</h4>
+<div *ngIf="isPublie" class="row m-2">
     <div *ngFor="let temoin of temoignages" class="col-xl-3 col-md-6 mb-4">
-        <temoignage-fils [ressource]="temoin"></temoignage-fils>
+        <temoignage-fils [ressource]="temoin" (ressourceEditor)="myRessource(temoin)"></temoignage-fils>
     </div>
 </div>

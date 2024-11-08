@@ -11,8 +11,8 @@ export class RessourceService {
 
   constructor(private http: HttpClient) { }
 
-  getRessources(): Observable<Ressource[]> {
-    return this.http.get<Ressource[]>(`${Configuration.UrlApi}/ressource`).pipe(
+  getRessources(type: string): Observable<Ressource[]> {
+    return this.http.get<Ressource[]>(`${Configuration.UrlApi}/ressource?type=${type}`).pipe(
       tap(c => console.log(c)),
       catchError(this.handleError));
   }
@@ -37,6 +37,29 @@ export class RessourceService {
       .pipe(map((res) => {
         return res;
       }))
+  }
+
+  valider(ressource: Ressource): Observable<Ressource> {
+    let urlModifie = `${Configuration.UrlApi}/ressource/modifie`;
+    return this.http.put<Ressource>(urlModifie, ressource, {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).pipe(
+      tap(c => console.log(c)),
+      catchError(this.handleError));
+  }
+
+  private toQueryString(query: any): string {
+    var parts = [];
+    for (var property in query) {
+      var value = query[property];
+      if (value != null && value != undefined)
+        parts.push(encodeURIComponent(property) + '=' + encodeURIComponent(value))
+    }
+
+    return parts.join('&');
   }
 
   private handleError(err: HttpErrorResponse) {

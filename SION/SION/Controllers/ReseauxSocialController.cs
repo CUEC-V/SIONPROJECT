@@ -110,24 +110,24 @@ namespace SION.Controllers
             return CreatedAtAction("GetReseauxSociauxDto", new { id = reseauxSociaux.Id }, reseauxSociaux);
         }
 
-        // DELETE: api/ReseauxSocial/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteReseauxSociauxDto(int id)
+        [HttpDelete]
+        [Route("delete/{id}")]
+        public async Task<ActionResult<IEnumerable<ReseauxSociauxDto>>> DeleteReseauxSociauxDto(int id)
         {
             if (_context.ReseauxSociaux == null)
             {
-                return NotFound();
+                return  new List<ReseauxSociauxDto>();
             }
             var reseauxSociauxDto = await _context.ReseauxSociaux.FindAsync(id);
             if (reseauxSociauxDto == null)
             {
-                return NotFound();
+                return new List<ReseauxSociauxDto>();
             }
 
             _context.ReseauxSociaux.Remove(reseauxSociauxDto);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return new List<ReseauxSociauxDto> { reseauxSociauxDto.Map() };
         }
 
         /// <summary>
