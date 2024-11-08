@@ -36,7 +36,7 @@ export class AnnoncesComponent implements OnInit, OnDestroy {
       }
       )
 
-    this.ressourceService.getRessources()
+    this.ressourceService.getRessources('A')
       .subscribe({
         next: annonces => { this.annonces = annonces; },
         error: err => console.log(err)

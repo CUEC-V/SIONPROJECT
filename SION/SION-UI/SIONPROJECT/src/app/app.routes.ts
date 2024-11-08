@@ -26,6 +26,7 @@ import { MessageListComponent } from './menu/services/nous-contacter/contact/mes
 import { MessageDetailComponent } from './menu/services/nous-contacter/contact/message-detail/message-detail.component';
 import { AjouterRessourceComponent } from './menu/ressources/ajouter-ressource/ajouter-ressource.component';
 import { GestionComponent } from './menu/ressources/gestion/gestion.component';
+import { RessourceEditionComponent } from './menu/ressources/gestion/ressource-edition/ressource-edition.component';
 
 export const routes: Routes = [
   {
@@ -92,8 +93,12 @@ export const routes: Routes = [
     component: TemoignagesComponent
   },
   {
-    path: 'ressources/temoignages/gestion',
+    path: 'ressources/gestion',
     component: GestionComponent
+  },
+  {
+    path: 'ressources/:id/edition/ajouter-fichier/:id',
+    component: RessourceEditionComponent
   },
   
   {

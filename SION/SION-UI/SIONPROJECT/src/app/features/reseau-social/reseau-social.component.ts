@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ReseauSocialService } from './service/reseau-social.service';
 import { ReseauSocialModel } from './models/reseau-social-model';
 import { CommonModule } from '@angular/common';
-import { RouterLinkWithHref } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-reseau-social',
@@ -13,7 +13,7 @@ import { RouterLinkWithHref } from '@angular/router';
 })
 export class ReseauSocialComponent implements OnInit, OnDestroy {
 
-  constructor(private reseauSocialService: ReseauSocialService) { }
+  constructor(private reseauSocialService: ReseauSocialService, private router: Router) { }
 
   resaux!: ReseauSocialModel[];
 
@@ -25,6 +25,21 @@ export class ReseauSocialComponent implements OnInit, OnDestroy {
       },
       error: err => console.log(err)
     })
+  }
+
+  delete(r: ReseauSocialModel) {
+    if (window.confirm('Confirmez-vous supprimer ce réseau social ?')) {
+      this.reseauSocialService.delete(r.id).subscribe({
+        next: l => {
+          console.log('====================================>');
+          if (l.length) {
+            console.log(l);
+            this.router.navigate(['/reseau-social']);
+          }
+        },
+        error: err => console.log(err)
+      })
+    }
   }
 
   ngOnDestroy(): void {

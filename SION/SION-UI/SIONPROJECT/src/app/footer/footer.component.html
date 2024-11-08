@@ -17,18 +17,13 @@
         </div>
         <div class="col-sm-3">
             <b class="d-block m-2 foot-title">Découvrez-nous !</b>
-            <span *ngFor="let r of accueil.reseauxSociaux" class="m-2 p-2 border rounded-circle"
+            <a *ngFor="let r of accueil.reseauxSociaux" href="{{r.site}}">
+            <span class="m-2 p-2 border rounded-circle"
                 [innerHTML]="r.urlImage" title="{{r.description}}"></span>
+            </a>
             <span class="d-block m-2"><i class="fa fa-music"></i> Music</span>
             <span class="d-block m-2"><i class="fa fa-book"></i> Lecture</span>
             <span class="d-block m-2"><i class="fa fa-calendar"> Calendrier</i></span>
-
-            <iframe width="450" height="250" frameborder="0" style="border:0"
-                referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed/v1/place
-                ?key={{keyAPI}}
-                &q=Eiffel+Tower,Paris+France" allowfullscreen>
-            </iframe>
         </div>
 
         <div class="col-sm-3">

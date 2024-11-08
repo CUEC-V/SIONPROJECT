@@ -1,0 +1,11 @@
+<div *ngIf="ressource">
+    <h2 class="m-2 border-bottom p-1">{{ressource.titre}} : {{ressource.typeRessource}}</h2>
+    <h3 class="m-2">{{ressource.sousTitre}}</h3>
+    <p *ngIf="ressource.description" class="m-2">
+        {{ressource.description}}
+    </p>
+
+     <input class="m-2" type="file" value="Charger l'image" (change)="selectFile($event)" />
+    <br />
+    <button (click)="fileUpload()" [disabled]="!currentFile">Envoyer</button>
+</div>

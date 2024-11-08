@@ -58,4 +58,18 @@ export class MajComponent implements OnInit {
         error: err => console.log(err)
       });
   }
+
+  delete(r: ReseauSocialModel) {
+    if (window.confirm('Confirmez-vous supprimer ce réseau social ?')) {
+      this.reseauSocialService.delete(r.id).subscribe({
+        next: l => {
+          if (l.length) {
+            console.log(l);
+            this.router.navigate(['/reseau-social']);
+          }
+        },
+        error: err => console.log(err)
+      })
+    }
+  }
 }
