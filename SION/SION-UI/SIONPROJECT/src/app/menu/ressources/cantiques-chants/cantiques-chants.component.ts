@@ -36,7 +36,7 @@ export class CantiquesChantsComponent implements OnInit, OnDestroy{
       }
       )
 
-    this.ressourceService.getRessources()
+    this.ressourceService.getRessources('C')
       .subscribe({
         next: annonces => { this.cantiques = annonces; },
         error: err => console.log(err)

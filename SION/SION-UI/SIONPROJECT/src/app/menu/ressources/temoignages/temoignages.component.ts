@@ -36,9 +36,9 @@ export class TemoignagesComponent implements OnInit, OnDestroy {
       }
       )
 
-    this.ressourceService.getRessources()
+    this.ressourceService.getRessources('T')
       .subscribe({
-        next: temoignes => { this.temoignes = temoignes; console.log("Ressources - temoignages ==>"); console.log(this.temoignes) },
+        next: temoignes => { this.temoignes = temoignes; console.log("Ressources - TEMOIGNAGES ==>");  },
         error: err => console.log(err)
       })
   }

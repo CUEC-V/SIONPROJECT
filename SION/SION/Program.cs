@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Cors policy
 var corsName = "PAT-TAB";
+var urlBase = "http://localhost:4200";
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -31,7 +32,7 @@ builder.Services.AddHsts(options =>
     options.Preload = true;
     options.IncludeSubDomains = true;
     options.MaxAge = TimeSpan.FromDays(60);
-    options.ExcludedHosts.Add("http://localhost:4200");
+    options.ExcludedHosts.Add(urlBase);
 });
 
 builder.Services.AddCors(options =>
@@ -39,7 +40,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: corsName,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:4200")
+                          policy.WithOrigins(urlBase)
                           .AllowAnyMethod()
                           .AllowAnyHeader();
                       });
