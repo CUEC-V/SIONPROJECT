@@ -1,3 +1,4 @@
+<a class="m-2 nav-link retourLink" routerLink="/Ressources"><i class="fa fa-arrow-left"></i></a>
 <div class="row">
     <div class="ressource-presentation text-center">
         <h2>Cérémonies, baptêmes, événements, photos, vidéos etc.</h2>
@@ -27,12 +28,18 @@
   <div *ngIf="isPublie" class="row m-2">
     <div *ngFor="let t of ceremonies" class="col-xl-3 col-md-6 mb-4">
         <div class="card border-0 shadow vh-50">
-            <a href="https://www.youtube.com/watch?v={{t.id}}" target="_blank">
-                <img [src]="t.url" class="card-img-top" alt="..."></a>
+            <img *ngIf="t.typeUrl===IMG" [src]="t.url" class="card-img-top" style="height: 200px;" alt="...">
+            <video *ngIf="t.typeUrl===VID" controls>
+                <source [src]="t.url" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="card-body text-center">
                 <h5 class="card-title mb-0">
-                    <a href="https://www.youtube.com/watch?v={{t.id}}">{{t.titre}} <br/> {{t.sousTitre}}
-                    </a>
+                    <span class="d-block"> {{t.titre}}</span>
+                    <span class="d-block"> {{t.sousTitre}}</span>
+                    <input type="button" class="m-2 bnt-action" value="+" title="Plus de détails"
+                        (click)="showPopup(t)">
+                    <app-core-popup *ngIf="isPopupVisible" [ressource]="myRessource" (close)="hidePopup()"></app-core-popup>
                 </h5>
                <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>--> 
                 <p><strong>Publiée le : </strong>{{t.creation| date:'dd-MM-yyyy hh:mm:ss'}}</p>

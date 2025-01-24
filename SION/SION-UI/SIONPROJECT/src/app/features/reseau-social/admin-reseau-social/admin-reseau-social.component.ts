@@ -3,12 +3,12 @@ import { ReseauSocialService } from '../service/reseau-social.service';
 import { ReseauSocialModel } from '../models/reseau-social-model';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-admin-reseau-social',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLinkWithHref],
   templateUrl: './admin-reseau-social.component.html',
   styleUrl: './admin-reseau-social.component.css'
 })

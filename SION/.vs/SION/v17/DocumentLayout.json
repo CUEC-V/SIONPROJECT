@@ -1,14 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\PAT PROJET\\GIT_PAT\\SIONPROJECT\\SION\\",
+  "WorkspaceRootPath": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\pat projet\\git_pat\\sionproject\\sion\\sion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|C:\\PAT PROJET\\GIT_PAT\\SIONPROJECT\\SION\\sion\\controllers\\accueilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\controllers\\accueilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION-UI\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SION-UI\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\models\\vmodels\\passwordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\models\\vmodels\\passwordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\models\\vmodels\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\models\\vmodels\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\controllers\\ressourcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\controllers\\ressourcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\models\\ressource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\models\\ressource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\migrations\\20240428090231_textehautettextbasashtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\migrations\\20240428090231_textehautettextbasashtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\migrations\\20240810192332_contactentitydate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\migrations\\20240810192332_contactentitydate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\models\\mapper\\ressourcemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\models\\mapper\\ressourcemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\models\\dto\\ressourcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\models\\dto\\ressourcedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\models\\parameters\\typeurlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\models\\parameters\\typeurlparameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\models\\reseauxsociaux.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\models\\reseauxsociaux.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|c:\\gitdossiers\\pierreangulaire\\sionproject\\sion\\sion\\controllers\\reseauxsocialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A04FE7-0BCA-4593-8F6B-553487C2776D}|SION\\SION.csproj|solutionrelative:sion\\controllers\\reseauxsocialcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +78,240 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 12,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\PAT PROJET\\GIT_PAT\\SIONPROJECT\\SION\\SION\\Program.cs",
-              "RelativeDocumentMoniker": "SION\\Program.cs",
-              "ToolTip": "C:\\PAT PROJET\\GIT_PAT\\SIONPROJECT\\SION\\SION\\Program.cs",
-              "RelativeToolTip": "SION\\Program.cs",
+              "DocumentIndex": 2,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION-UI\\package.json",
+              "RelativeDocumentMoniker": "SION-UI\\package.json",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION-UI\\package.json",
+              "RelativeToolTip": "SION-UI\\package.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T10:56:50.096Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-24T17:47:12.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccueilController.cs",
-              "DocumentMoniker": "C:\\PAT PROJET\\GIT_PAT\\SIONPROJECT\\SION\\SION\\Controllers\\AccueilController.cs",
-              "RelativeDocumentMoniker": "SION\\Controllers\\AccueilController.cs",
-              "ToolTip": "C:\\PAT PROJET\\GIT_PAT\\SIONPROJECT\\SION\\SION\\Controllers\\AccueilController.cs",
-              "RelativeToolTip": "SION\\Controllers\\AccueilController.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "SION\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "SION\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T21:06:40.765Z"
+              "WhenOpened": "2025-01-17T21:01:59.293Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SION\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SION\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAuwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:08:10.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "SION\\Controllers\\ContactController.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "SION\\Controllers\\ContactController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwCAAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:08:25.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Vmodels\\Login.cs",
+              "RelativeDocumentMoniker": "SION\\Models\\Vmodels\\Login.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Vmodels\\Login.cs",
+              "RelativeToolTip": "SION\\Models\\Vmodels\\Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:12:03.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PasswordModel.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Vmodels\\PasswordModel.cs",
+              "RelativeDocumentMoniker": "SION\\Models\\Vmodels\\PasswordModel.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Vmodels\\PasswordModel.cs",
+              "RelativeToolTip": "SION\\Models\\Vmodels\\PasswordModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:14:10.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Program.cs",
+              "RelativeDocumentMoniker": "SION\\Program.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Program.cs",
+              "RelativeToolTip": "SION\\Program.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAnwAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:49:41.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RessourceController.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\RessourceController.cs",
+              "RelativeDocumentMoniker": "SION\\Controllers\\RessourceController.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\RessourceController.cs",
+              "RelativeToolTip": "SION\\Controllers\\RessourceController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T19:33:32.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\appsettings.json",
+              "RelativeDocumentMoniker": "SION\\appsettings.json",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\appsettings.json",
+              "RelativeToolTip": "SION\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-08T20:58:42.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Ressource.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Ressource.cs",
+              "RelativeDocumentMoniker": "SION\\Models\\Ressource.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Ressource.cs",
+              "RelativeToolTip": "SION\\Models\\Ressource.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAiwB0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T21:59:02.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20240428090231_TexteHautEtTextBasAsHtml.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Migrations\\20240428090231_TexteHautEtTextBasAsHtml.cs",
+              "RelativeDocumentMoniker": "SION\\Migrations\\20240428090231_TexteHautEtTextBasAsHtml.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Migrations\\20240428090231_TexteHautEtTextBasAsHtml.cs",
+              "RelativeToolTip": "SION\\Migrations\\20240428090231_TexteHautEtTextBasAsHtml.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T19:20:39.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20240810192332_ContactEntityDate.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Migrations\\20240810192332_ContactEntityDate.cs",
+              "RelativeDocumentMoniker": "SION\\Migrations\\20240810192332_ContactEntityDate.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Migrations\\20240810192332_ContactEntityDate.cs",
+              "RelativeToolTip": "SION\\Migrations\\20240810192332_ContactEntityDate.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T19:20:21.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RessourceMapper.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Mapper\\RessourceMapper.cs",
+              "RelativeDocumentMoniker": "SION\\Models\\Mapper\\RessourceMapper.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Mapper\\RessourceMapper.cs",
+              "RelativeToolTip": "SION\\Models\\Mapper\\RessourceMapper.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwCYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T22:05:41.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RessourceDto.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Dto\\RessourceDto.cs",
+              "RelativeDocumentMoniker": "SION\\Models\\Dto\\RessourceDto.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Dto\\RessourceDto.cs",
+              "RelativeToolTip": "SION\\Models\\Dto\\RessourceDto.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAswBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T22:04:03.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TypeUrlParameter.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Parameters\\TypeUrlParameter.cs",
+              "RelativeDocumentMoniker": "SION\\Models\\Parameters\\TypeUrlParameter.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\Parameters\\TypeUrlParameter.cs",
+              "RelativeToolTip": "SION\\Models\\Parameters\\TypeUrlParameter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T22:01:47.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ReseauxSocialController.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\ReseauxSocialController.cs",
+              "RelativeDocumentMoniker": "SION\\Controllers\\ReseauxSocialController.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Controllers\\ReseauxSocialController.cs",
+              "RelativeToolTip": "SION\\Controllers\\ReseauxSocialController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAACBjwE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T19:22:20.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReseauxSociaux.cs",
+              "DocumentMoniker": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\ReseauxSociaux.cs",
+              "RelativeDocumentMoniker": "SION\\Models\\ReseauxSociaux.cs",
+              "ToolTip": "C:\\GitDossiers\\PierreAngulaire\\SIONPROJECT\\SION\\SION\\Models\\ReseauxSociaux.cs",
+              "RelativeToolTip": "SION\\Models\\ReseauxSociaux.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAQwA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T19:18:27.927Z"
             }
           ]
         }

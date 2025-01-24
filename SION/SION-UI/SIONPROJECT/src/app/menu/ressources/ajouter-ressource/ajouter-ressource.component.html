@@ -1,3 +1,4 @@
+<a class="m-2 nav-link retourLink" routerLink="/administration-general"><i class="fa fa-arrow-left"></i></a>
 <h2 class="m-2 text-center"> Publier une ressource</h2>
 <form [formGroup]="ressourceFormGroup" (ngSubmit)="onSubmit()">
     <fieldset class="m-2">
@@ -46,6 +47,20 @@
                         <option *ngFor="let t of items" value="{{t.key}}">{{t.value}}</option>
                     </select>
                     <span *ngIf="ressourceFormGroup.get('typeRessource')?.invalid" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="formGroup">
+                <div class="form-group">
+                    <label for="typeUrl" class="control-label m-1">Type pièce jointe</label>
+                    <select  formControlName="typeUrl" class="form-control">
+                        <option *ngFor="let t of itemsUrl" value="{{t.key}}">{{t.value}}</option>
+                    </select>
+                    <span *ngIf="ressourceFormGroup.get('typeUrl')?.invalid" class="text-danger">
+                        Type pièce jointe est requise
+                    </span>
                 </div>
             </div>
         </div>

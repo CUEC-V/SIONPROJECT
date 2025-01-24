@@ -19,6 +19,7 @@ export class AccueilComponent implements OnInit, Unsubscribable {
   accueils: Accueil[] | undefined;
   videoPasteur: any;
   videoId: string = '';
+  isAuthenticated: boolean | null = null;
 
   constructor(private accueilService: AccueilService) { }
 

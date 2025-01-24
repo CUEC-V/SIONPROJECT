@@ -16,6 +16,8 @@ namespace SION.Models
         [DataType(DataType.ImageUrl)]
         public string? Url { get; set; }
 
+        public string? TypeUrl { get; set; } = TypeUrlParameter.IMG;
+
         [DataType(DataType.Html)]
         public string? Description { get; set; }
 
