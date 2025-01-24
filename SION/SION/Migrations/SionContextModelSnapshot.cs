@@ -282,6 +282,9 @@ namespace SION.Migrations
                     b.Property<string>("TypeRessource")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("TypeUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Url")
                         .HasColumnType("nvarchar(max)");
 

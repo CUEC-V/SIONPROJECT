@@ -16,6 +16,8 @@ export interface Ressource {
     dateModification?: Date;
 
     typeRessource: string;
-    
-    IsPublie : boolean;
+
+    isPublie: boolean;
+
+    typeUrl: string;
 }
