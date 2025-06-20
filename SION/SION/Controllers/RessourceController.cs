@@ -57,9 +57,15 @@ namespace SION.Controllers
                 return Problem("Entity set 'SionContext.Ressources'  is null.");
             }
 
-            _context.Ressources.Add(ressource.ToDto());
-            await _context.SaveChangesAsync();
-
+            try
+            {
+                _context.Ressources.Add(ressource.ToDto());
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                var teu = ex;
+            }
             return CreatedAtAction("GetRessource", new { id = ressource.Id }, ressource);
         }
 
@@ -139,34 +145,6 @@ namespace SION.Controllers
         [Route("modifie")]
         public async Task<IActionResult> PutRessource(RessourceDto ressource)
         {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             var dto = await _context.Ressources.FindAsync(ressource.Id);
             if (dto == null)
                 return NotFound();

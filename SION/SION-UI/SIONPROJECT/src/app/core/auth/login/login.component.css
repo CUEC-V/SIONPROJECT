@@ -1,0 +1,22 @@
+.logopa {
+    width: 70px;
+    height: 70px;
+}
+
+.login {
+    height: 450px;
+}
+
+.email-et-mot-de-passe {
+    font-weight: 100;
+    text-decoration: none;
+    cursor: pointer;
+    color: blue;
+}
+
+.email-et-mot-de-passe:hover {
+   /* text-decoration: underline;*/
+    border:solid 1px  #FF7E05;
+    border-radius: 20px;
+    padding: 1%;
+}

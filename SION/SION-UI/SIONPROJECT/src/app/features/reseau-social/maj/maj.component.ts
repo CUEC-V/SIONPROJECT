@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReseauSocialService } from '../service/reseau-social.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLinkWithHref } from '@angular/router';
 import { ReseauSocialModel } from '../models/reseau-social-model';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-maj',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,RouterLinkWithHref],
   templateUrl: './maj.component.html',
   styleUrl: './maj.component.css'
 })

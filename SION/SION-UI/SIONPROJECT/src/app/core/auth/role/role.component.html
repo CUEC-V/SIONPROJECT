@@ -1,0 +1,21 @@
+<h1 *ngIf="isSuccess" class="success">Le rôle a été ajouté avec succès !</h1>
+<form [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="formGroup">
+            <div class="form-group" style="text-align: center;">
+                <label for="name" class="control-label m-1">INTITULE DU ROLE</label>
+                <select class="select"  formControlName="name">
+                    <option *ngFor="let t of items" value="{{t.key}}">{{t.value}}</option>
+                </select>
+                <span *ngIf="roleForm.get('name')?.invalid" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+<input formControlName="normalizedName" style="display: none;">
+    <div class="form-group">
+
+        <div class="m-2 mt-4 text-center">
+            <button class="bnt bnt-primary rounded-4" type="submit" [disabled]="!roleForm.valid">Ajouter</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+<div *ngIf="ressource" class="popup-overlay" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+        <h2 class="bg-body-secondary">{{ressource.titre}}</h2>
+        <h3>{{ressource.sousTitre}}</h3>
+        <div class="row m-2">
+            <div class="col-md-3">
+                Créer par {{ressource.auteur}}
+            </div>
+            <div class="col-md-3">
+                Créer le {{ressource.creation | date: 'dd/MM/yyyy HH:mm'}}
+            </div>
+            <div class="col-md-3">
+                Modifier le {{ressource.dateModification | date: 'dd/MM/yyyy HH:mm'}}
+            </div>
+
+            <div class="col-md-3">
+                Type : {{ressource.typeRessource}}
+            </div>
+        </div>
+        <div class="d-flex m-2 p-1 border desc">
+            {{ressource.description}}
+        </div>
+        <button (click)="closePopup()">Quitter</button>
+    </div>
+</div>

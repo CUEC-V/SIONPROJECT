@@ -1,0 +1,14 @@
+.justify {
+    text-align: justify;
+}
+.tb {
+    table-layout: auto;
+    width: 100%;
+}
+
+.tr {
+    background-color: darkcyan;
+    padding: 1%;
+    height: 60px;
+    color: white;
+}

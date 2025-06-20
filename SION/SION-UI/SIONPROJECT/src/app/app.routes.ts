@@ -27,11 +27,27 @@ import { MessageDetailComponent } from './menu/services/nous-contacter/contact/m
 import { AjouterRessourceComponent } from './menu/ressources/ajouter-ressource/ajouter-ressource.component';
 import { GestionComponent } from './menu/ressources/gestion/gestion.component';
 import { RessourceEditionComponent } from './menu/ressources/gestion/ressource-edition/ressource-edition.component';
+import { AuthGuard } from './core/guards/auth.guard';
+import { LoginComponent } from './core/auth/login/login.component';
+import { RoleComponent } from './core/auth/role/role.component';
+import { UserRoleComponent } from './core/auth/user-role/user-role.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: AccueilComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'role',
+    component: RoleComponent
+  },
+  {
+    path: 'userRole',
+    component: UserRoleComponent
   },
   {
     path: 'Qui-sommes-nous',
@@ -48,7 +64,8 @@ export const routes: Routes = [
   },
   {
     path: 'administration-general',
-    component: AdminGeneralComponent
+    component: AdminGeneralComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'Les-offices',
@@ -100,7 +117,7 @@ export const routes: Routes = [
     path: 'ressources/:id/edition/ajouter-fichier/:id',
     component: RessourceEditionComponent
   },
-  
+
   {
     path: 'ressources/cantiques-chants',
     component: CantiquesChantsComponent

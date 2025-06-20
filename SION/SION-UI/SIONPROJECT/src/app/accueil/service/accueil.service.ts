@@ -51,6 +51,14 @@ export class AccueilService {
       }))
   }
   
+  getVideoByVideoIdForChanelByRessources(channel: string, videoId: string, ressourceId : string): Observable<any> {
+    let url = 'https://www.googleapis.com/youtube/v3/search?key=' + Configuration.Youtube_API_KEY + '&channelId=' + channel + '&order=date&part=snippet &type=video,videoId=' + videoId
+    return this.http.get(url)
+      .pipe(map((res) => {
+        return res;
+      }))
+  }
+
   private handleError(err: HttpErrorResponse) {
     let errorMessage = '';
     console.log(err);

@@ -1,21 +1,25 @@
-<div *ngIf="ressource" class="card border-0 shadow vh-50">
-    <a href="https://www.youtube.com/watch?v={{ressource.id}}" target="_blank">
-        <img [src]="ressource.url" class="card-img-top" style="height: 200px;" alt="..."></a>
+<div *ngIf="ressource" class="card border-0 shadow vh-50"   style="height: 400px">
+        <img *ngIf="ressource.typeUrl===IMG" [src]="ressource.url" class="card-img-top" style="height: 200px;" alt="...">
+        <video  *ngIf="ressource.typeUrl===VID" controls>
+            <source [src]="ressource.url" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
     <div class="card-body text-center">
         <h5 class="card-title mb-0">
             <h3>
                 <span class="d-block"> {{ressource.titre}}</span>
-                <span class="d-block"> {{ressource.titre}}</span>
+                <span class="d-block"> {{ressource.sousTitre}}</span>
             </h3>
         </h5>
         <!--<div class="card-text text-black-50">{{video.snippet.description.slice(0, 100)}}</div>-->
         <p><strong>Publiée le : </strong>{{ressource.creation| date:'dd-MM-yyyy hh:mm:ss'}}</p>
     </div>
     <div class="d-flex m-2 justify-content-center">
-        <div>OUI {{ressource.auteur}}{{ressource.IsPublie}}</div>
-        <input type="button" class="m-2 bnt-action" value="{{ressource.IsPublie ?'✓':'⍻'}}" title="Publier"
+        <input type="button" class="m-2 bnt-action" value="{{ressource.isPublie ?'✓':'⍻'}}" title="Publier"
             (click)="valider(ressource)">
-        <input type="button" class="m-2 bnt-action" value="+" title="Plus de détails">
+        <input type="button" class="m-2 bnt-action" value="+" title="Plus de détails"
+            (click)="showPopup(ressource)">
+        <app-core-popup *ngIf="isPopupVisible" [ressource]="ressource" (close)="hidePopup()"></app-core-popup>
         <input type="button" class="m-2 bnt-action" value="✎" (click)="modifier(ressource.id)"
             title="Modifier ou publier un témoignage">
     </div>

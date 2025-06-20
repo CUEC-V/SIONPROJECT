@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SION.DbData;
 using SION.Models;
 using SION.Models.Mapper;
+using SION.Parameter;
 
 namespace SION.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class AccueilController : ControllerBase
     {
         private readonly SionContext _context;
@@ -24,6 +27,7 @@ namespace SION.Controllers
 
         // GET: api/Accueil
         [HttpGet]
+        [AllowAnonymous]
         public ActionResult<IEnumerable<AccueilVM>> GetAccueils()
         {
             if (_context.Accueils == null)
@@ -40,6 +44,7 @@ namespace SION.Controllers
 
         // GET: api/Accueil/5
         [HttpGet("{id}")]
+        [Authorize(Roles = Rights.D)]
         public async Task<ActionResult<AccueilVM>> GetAccueil(int id)
         {
             if (_context.Accueils == null)
@@ -69,6 +74,7 @@ namespace SION.Controllers
         //[HttpPut("{id}")]
         [HttpPut]
         [Route("modifie")]
+        [Authorize(Roles = Rights.D)]
         public async Task<IActionResult> PutAccueil(AccueilDto accueil)
         {
             var dto = await _context.Accueils.FindAsync(accueil.Id);
@@ -104,6 +110,7 @@ namespace SION.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Route("creer")]
+        [Authorize(Roles = Rights.D)]
         public async Task<ActionResult<AccueilDto>> PostAccueil(AccueilDto accueil)
         {
             if (_context.Accueils == null)
@@ -118,6 +125,7 @@ namespace SION.Controllers
 
         // DELETE: api/Accueil/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = Rights.D)]
         public async Task<IActionResult> DeleteAccueil(int id)
         {
             if (_context.Accueils == null)

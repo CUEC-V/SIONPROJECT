@@ -4,11 +4,12 @@ import { RouterLinkWithHref } from '@angular/router';
 import { RessourceService } from '../service/ressource.service';
 import { Ressource } from '../models/ressource-model';
 import { Configuration } from '../../../configuration';
+import { CorepComponent } from "../../../popup/core/core-p.component";
 
 @Component({
   selector: 'app-ceremonies-evenement',
   standalone: true,
-  imports: [CommonModule, RouterLinkWithHref],
+  imports: [CommonModule, RouterLinkWithHref, CorepComponent],
   templateUrl: './ceremonies-evenement.component.html',
   styleUrl: './ceremonies-evenement.component.css'
 })
@@ -22,15 +23,23 @@ export class CeremoniesEvenementComponent implements OnInit, OnDestroy {
   isPublie: boolean = false;
   publie: string = "+ Cérémonies écrites et publiées";
 
+  myRessource: Ressource | undefined;
+  isPopupVisible = false;
+
+  IMG: string = Configuration.IMG;
+  VID: string = Configuration.VID;
+
   constructor(private ressourceService: RessourceService) { }
   ngOnInit(): void {
     this.videos = [];
     this.youtubeVideosNumber = Configuration.Youtube_VIDEOS_NUMBER;
 
     this.ressourceService
-      .getVideosForChanel(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber)
+    .getVideosForChanelByRessources(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber,'EEE')
       .subscribe({
-        next: videos => { this.videos = videos["items"]; console.log(this.videos) },
+        next: videos => { this.videos = videos["items"]; 
+          console.log(this.videos)
+         },
         error: err => console.log(err)
       }
       )
@@ -61,6 +70,17 @@ export class CeremoniesEvenementComponent implements OnInit, OnDestroy {
         next: videos => { this.videos = videos["items"]; console.log(this.videos) },
         error: err => console.log(err)
       })
+  }
+
+  showPopup(rsc: Ressource) {
+    this.isPopupVisible = true;
+    if (rsc) {
+      this.myRessource = rsc;
+    }
+  }
+
+  hidePopup() {
+    this.isPopupVisible = false;
   }
 
   ngOnDestroy(): void {

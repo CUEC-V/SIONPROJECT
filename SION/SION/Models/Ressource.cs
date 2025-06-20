@@ -10,16 +10,18 @@ namespace SION.Models
 
         public string? SousTitre { get; set; }
 
-        [Display(Name ="Provenance")]
+        [Display(Name = "Provenance")]
         public string? Auteur { get; set; }
 
         [DataType(DataType.ImageUrl)]
         public string? Url { get; set; }
 
+        public string? TypeUrl { get; set; } = TypeUrlParameter.IMG;
+
         [DataType(DataType.Html)]
         public string? Description { get; set; }
 
-        public DateTime Creation {  get; set; }
+        public DateTime Creation { get; set; }
 
         public DateTime DateModification { get; set; }
 

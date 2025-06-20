@@ -1,0 +1,30 @@
+<form [formGroup]="roleForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="formGroup">
+            <div class="form-group" style="text-align: center;">
+                <label for="userId" class="control-label m-1"> UTILISATEUR *</label>
+                <select class="select"  formControlName="userId">
+                    <option *ngFor="let t of items" value="{{t.userId}}">{{t.user}}</option>
+                </select>
+                <span *ngIf="roleForm.get('userId')?.invalid" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="formGroup">
+            <div class="form-group" style="text-align: center;">
+                <label for="roleId" class="control-label m-1"> ROLE UTILIS*</label>
+                <select class="select"  formControlName="roleId">
+                    <option *ngFor="let t of roles" value="{{t.roleId}}">{{t.role}}</option>
+                </select>
+                <span *ngIf="roleForm.get('roleId')?.invalid" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+<input formControlName="normalizedName" style="display: none;">
+    <div class="form-group">
+
+        <div class="m-2 mt-4 text-center">
+            <button class="bnt bnt-primary rounded-4" type="submit" [disabled]="!roleForm.valid">Ajouter</button>
+        </div>
+    </div>
+</form>

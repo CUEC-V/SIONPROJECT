@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RessourceService } from '../../service/ressource.service';
 import { UploadService } from '../../../../core/upload-file.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLinkWithHref } from '@angular/router';
 import { Ressource } from '../../models/ressource-model';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
@@ -10,7 +10,7 @@ import { HttpResponse } from '@angular/common/http';
 @Component({
   selector: 'app-ressource-edition',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLinkWithHref],
   templateUrl: './ressource-edition.component.html',
   styleUrl: './ressource-edition.component.css'
 })

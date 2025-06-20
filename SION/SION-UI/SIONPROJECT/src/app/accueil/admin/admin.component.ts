@@ -4,12 +4,12 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Message } from '../../message';
 import { AccueilModel } from '../models/accueil-model';
 import { AccueilService } from '../service/accueil.service';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLinkWithHref],
   templateUrl: './admin.component.html',
   styleUrl: './admin.component.css'
 })

@@ -4,12 +4,12 @@ import { Ressource } from '../models/ressource-model';
 import { CommonModule } from '@angular/common';
 import { TemoinFilsComponent } from "./temoin-fils/temoin-fils.component";
 import { Configuration } from '../../../configuration';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 
 @Component({
   selector: 'app-gestion',
   standalone: true,
-  imports: [CommonModule, TemoinFilsComponent],
+  imports: [CommonModule, TemoinFilsComponent, RouterLinkWithHref],
   templateUrl: './gestion.component.html',
   styleUrl: './gestion.component.css'
 })

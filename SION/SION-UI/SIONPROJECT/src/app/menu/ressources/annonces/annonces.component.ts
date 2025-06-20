@@ -4,11 +4,12 @@ import { RouterLinkWithHref } from '@angular/router';
 import { RessourceService } from '../service/ressource.service';
 import { Ressource } from '../models/ressource-model';
 import { Configuration } from '../../../configuration';
+import { CorepComponent } from "../../../popup/core/core-p.component";
 
 @Component({
   selector: 'pat-cantiques',
   standalone: true,
-  imports: [CommonModule, RouterLinkWithHref],
+  imports: [CommonModule, RouterLinkWithHref, CorepComponent],
   templateUrl: './annonces.component.html',
   styleUrl: './annonces.component.css'
 })
@@ -22,6 +23,11 @@ export class AnnoncesComponent implements OnInit, OnDestroy {
   isPublie: boolean = false;
   publie: string = "+ Annonces écrites et publiées";
 
+  myRessource: Ressource | undefined;
+  isPopupVisible = false;
+  IMG: string = Configuration.IMG;
+  VID: string = Configuration.VID;
+
   constructor(private ressourceService: RessourceService) { }
 
   ngOnInit(): void {
@@ -29,12 +35,14 @@ export class AnnoncesComponent implements OnInit, OnDestroy {
     this.youtubeVideosNumber = Configuration.Youtube_VIDEOS_NUMBER;
 
     this.ressourceService
-      .getVideosForChanel(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber)
+    .getVideosForChanelByRessources(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber,'AAA')
       .subscribe({
-        next: videos => { this.videos = videos["items"]; console.log(this.videos) },
+        next: videos => {
+          this.videos = videos["items"]/*.filter((c: any) => c.snippet.title?.startsWith("AAA"))*/;
+          console.log(this.videos);
+        },
         error: err => console.log(err)
-      }
-      )
+      })
 
     this.ressourceService.getRessources('A')
       .subscribe({
@@ -62,6 +70,17 @@ export class AnnoncesComponent implements OnInit, OnDestroy {
         next: videos => { this.videos = videos["items"]; console.log(this.videos) },
         error: err => console.log(err)
       })
+  }
+
+  showPopup(rsc: Ressource) {
+    this.isPopupVisible = true;
+    if (rsc) {
+      this.myRessource = rsc;
+    }
+  }
+
+  hidePopup() {
+    this.isPopupVisible = false;
   }
 
   ngOnDestroy(): void {

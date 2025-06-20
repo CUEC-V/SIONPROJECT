@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLinkWithHref } from '@angular/router';
 
 @Component({
@@ -9,6 +9,9 @@ import { RouterLinkWithHref } from '@angular/router';
   templateUrl: './admin-general.component.html',
   styleUrl: './admin-general.component.css'
 })
-export class AdminGeneralComponent {
-
+export class AdminGeneralComponent implements OnInit {
+  isAuthenticated: boolean | null = null;
+  constructor() { }
+  ngOnInit(): void {
+  }
 }

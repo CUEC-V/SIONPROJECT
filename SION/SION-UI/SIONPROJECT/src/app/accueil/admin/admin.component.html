@@ -1,6 +1,6 @@
-<i class="fa-solid fa-left-long"></i>
+<a class="m-2 nav-link retourLink" routerLink="/administration-general"><i class="fa fa-arrow-left"></i></a>
 
-<h3>Administration page d'accueil</h3>
+<h3 class="m-2">Administration page d'accueil</h3>
 
 <form [formGroup]="accueilFormGroup" (ngSubmit)="onSubmit()">
     <h4 (click)="toggle('I')">{{information}}</h4>
