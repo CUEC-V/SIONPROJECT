@@ -39,6 +39,14 @@ export class RessourceService {
       }))
   }
 
+    getVideosForChanelByRessources(channel: string, maxResults: number,term:string): Observable<any> {
+    let url = 'https://www.googleapis.com/youtube/v3/search?key=' + Configuration.Youtube_API_KEY + '&channelId=' + channel + '&order=date&part=snippet &type=video,id&maxResults=' + maxResults+`&q=${term}`
+    return this.http.get(url)
+      .pipe(map((res) => {
+        return res;
+      }))
+  }
+
   valider(ressource: Ressource): Observable<Ressource> {
     let urlModifie = `${Configuration.UrlApi}/ressource/modifie`;
     return this.http.put<Ressource>(urlModifie, ressource, {

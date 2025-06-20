@@ -35,9 +35,11 @@ export class CeremoniesEvenementComponent implements OnInit, OnDestroy {
     this.youtubeVideosNumber = Configuration.Youtube_VIDEOS_NUMBER;
 
     this.ressourceService
-      .getVideosForChanel(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber)
+    .getVideosForChanelByRessources(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber,'EEE')
       .subscribe({
-        next: videos => { this.videos = videos["items"]; console.log(this.videos) },
+        next: videos => { this.videos = videos["items"]; 
+          console.log(this.videos)
+         },
         error: err => console.log(err)
       }
       )

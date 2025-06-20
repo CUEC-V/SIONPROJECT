@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { afterNextRender, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLinkWithHref, RouterOutlet } from '@angular/router';
 import { FooterComponent } from "./footer/footer.component";
@@ -11,10 +11,26 @@ import { FooterComponent } from "./footer/footer.component";
   imports: [CommonModule, RouterOutlet, RouterLinkWithHref, FooterComponent]
 })
 export class AppComponent implements OnInit {
-  isAuthenticated: boolean | null = null;
+  isAuthenticated: boolean  = false;
+  constructor() {
+    afterNextRender(() => {
+
+      const storedData = localStorage.getItem('MANAGE');
+      if (storedData) {
+        try {
+          this.isAuthenticated = JSON.parse(storedData);
+          console.log(this.isAuthenticated+' dans app');
+        }
+        catch (err) {
+        }
+      } else {
+        this.isAuthenticated = false;
+        console.log(this.isAuthenticated+' dans app');
+      }
+    });
+  }
   ngOnInit(): void {
-    let item = localStorage?.getItem('MANAGE') ?? 'false';
-    this.isAuthenticated = Boolean(item);
+
   }
   title = 'SIONPROJECT';
 }

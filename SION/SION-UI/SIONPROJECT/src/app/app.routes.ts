@@ -29,6 +29,8 @@ import { GestionComponent } from './menu/ressources/gestion/gestion.component';
 import { RessourceEditionComponent } from './menu/ressources/gestion/ressource-edition/ressource-edition.component';
 import { AuthGuard } from './core/guards/auth.guard';
 import { LoginComponent } from './core/auth/login/login.component';
+import { RoleComponent } from './core/auth/role/role.component';
+import { UserRoleComponent } from './core/auth/user-role/user-role.component';
 
 export const routes: Routes = [
   {
@@ -38,6 +40,14 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'role',
+    component: RoleComponent
+  },
+  {
+    path: 'userRole',
+    component: UserRoleComponent
   },
   {
     path: 'Qui-sommes-nous',

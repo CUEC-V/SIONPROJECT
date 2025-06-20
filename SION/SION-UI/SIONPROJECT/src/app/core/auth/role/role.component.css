@@ -1,0 +1,11 @@
+.select {
+    width: 300px;
+    padding: 1%;
+    margin: 1%;
+    border:solid 1px lightgray;
+}
+
+.success {
+    border-bottom: solid 1px lightgray;
+    color: green;
+}

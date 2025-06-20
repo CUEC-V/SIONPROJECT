@@ -42,20 +42,19 @@ export class LoginComponent implements OnInit {
     this.authService.loginByEmail(value).subscribe({
       next: login => {
         this.loginModel = login;
-        if (!this.loginModel) {
-          this.router.navigate(['/']);
+
+        if (this.loginModel) {
+          this.isLoginEmail = false;
+          this.cookie = this.randoMstring();
+          this.isLoginPassword = true;
+
+          this.passwordFormGroup = new FormGroup({
+            cookie: new FormControl(this.cookie),
+            loginTapeFormCtrl: new FormControl(this.loginModel.loginTapeFormCtrl, [Validators.required, Validators.email]),
+            passwordTapeFormCtrl: new FormControl('', [Validators.required])
+          });
+
         }
-
-        this.isLoginEmail = false;
-        this.cookie = this.randoMstring();
-        this.isLoginPassword = true;
-
-        this.passwordFormGroup = new FormGroup({
-          cookie: new FormControl(this.cookie),
-          loginTapeFormCtrl: new FormControl(this.loginModel.loginTapeFormCtrl, [Validators.required, Validators.email]),
-          passwordTapeFormCtrl: new FormControl('', [Validators.required])
-        })
-
       },
       error: err => console.log(err)
     })
@@ -68,6 +67,7 @@ export class LoginComponent implements OnInit {
     this.authService.loginByPassWord(value).subscribe({
       next: pwd => {
         if (pwd && Boolean(pwd)) {
+          this.authService.login();
           this.router.navigate(['/administration-general']);
         }
       },

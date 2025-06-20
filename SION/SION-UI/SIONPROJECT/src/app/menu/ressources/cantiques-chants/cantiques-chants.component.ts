@@ -34,11 +34,14 @@ export class CantiquesChantsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.videos = [];
     this.youtubeVideosNumber = Configuration.Youtube_VIDEOS_NUMBER;
-
+//https://medium.com/@ericlaitman/using-youtube-data-api-to-search-for-any-video-5b66b01d727b
     this.ressourceService
-      .getVideosForChanel(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber)
+    .getVideosForChanelByRessources(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber,'CCC')
       .subscribe({
-        next: videos => { this.videos = videos["items"]; console.log(this.videos) },
+        next: videos => {
+          this.videos = videos["items"]/*.filter((c: any) => c.snippet.title?.startsWith("CCC"))*/;
+          console.log(this.videos)
+        },
         error: err => console.log(err)
       }
       )
