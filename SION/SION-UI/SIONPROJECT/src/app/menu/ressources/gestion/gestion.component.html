@@ -11,7 +11,7 @@
 <div>
     <div *ngIf="isYoutube" class="row m-2">
         <div *ngFor="let video of videos" class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-0 shadow vh-50">
+            <div class="card border-0 shadow vh-50"   style="height: 400px">
                 <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">
                     <img [src]="video.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
                 <div class="card-body text-center">

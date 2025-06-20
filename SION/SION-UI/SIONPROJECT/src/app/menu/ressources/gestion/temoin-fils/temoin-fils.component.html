@@ -1,4 +1,4 @@
-<div *ngIf="ressource" class="card border-0 shadow vh-50">
+<div *ngIf="ressource" class="card border-0 shadow vh-50"   style="height: 400px">
         <img *ngIf="ressource.typeUrl===IMG" [src]="ressource.url" class="card-img-top" style="height: 200px;" alt="...">
         <video  *ngIf="ressource.typeUrl===VID" controls>
             <source [src]="ressource.url" type="video/mp4">

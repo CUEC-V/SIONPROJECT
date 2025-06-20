@@ -35,12 +35,14 @@ export class AnnoncesComponent implements OnInit, OnDestroy {
     this.youtubeVideosNumber = Configuration.Youtube_VIDEOS_NUMBER;
 
     this.ressourceService
-      .getVideosForChanel(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber)
+    .getVideosForChanelByRessources(Configuration.Youtube_CHANNEL_NAME, this.youtubeVideosNumber,'AAA')
       .subscribe({
-        next: videos => { this.videos = videos["items"]; console.log(this.videos) },
+        next: videos => {
+          this.videos = videos["items"]/*.filter((c: any) => c.snippet.title?.startsWith("AAA"))*/;
+          console.log(this.videos);
+        },
         error: err => console.log(err)
-      }
-      )
+      })
 
     this.ressourceService.getRessources('A')
       .subscribe({

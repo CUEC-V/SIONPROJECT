@@ -19,5 +19,5 @@ export const AuthGuard = () => {
   localStorage.setItem('MANAGE', JSON.stringify(myObj));
   // Read item:
   //let item = JSON.parse(localStorage.getItem(key));
-  return true
+  return myObj;
 }

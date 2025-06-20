@@ -7,19 +7,24 @@
 
         <div class="col-sm-3">
             <b class="d-block foot-title">Nous contacter</b>
-            <span class="d-block"><i class="fa fa-map-marker"></i>&nbsp;{{accueil.accueil.numeroLibelleAdresse}} {{accueil.accueil.codePostaleVillePays}}</span>
+            <span class="d-block"><i class="fa fa-map-marker"></i>&nbsp;{{accueil.accueil.numeroLibelleAdresse}}
+                {{accueil.accueil.codePostaleVillePays}}</span>
             <span class="d-block mt-2"><i class="fa fa-phone"></i>&nbsp;{{accueil.accueil.numeroTelephone}}</span>
             <b class="d-block foot-title">Ouverture des portes</b>
             <span class="d-block mt-2">{{accueil.accueil.premierJourCulte}}</span>
             <span class="d-block">{{accueil.accueil.deuxiemeJourCulte}}</span>
             <span class="d-block">{{accueil.accueil.troisiemeJourCulte}}</span>
             <span class="d-block">{{accueil.accueil.autreJoureCulte}}</span>
+            <!--
+            <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDxSiqYO-xFFqjAJ2cbUxUAmqh6bYmZMis
+    &q=Space+Needle,Seattle+WA">
+            </iframe> -->
         </div>
         <div class="col-sm-3">
             <b class="d-block m-2 foot-title">Découvrez-nous !</b>
             <a *ngFor="let r of accueil.reseauxSociaux" href="{{r.site}}">
-            <span class="m-2 p-2 border rounded-circle"
-                [innerHTML]="r.urlImage" title="{{r.description}}"></span>
+                <span class="m-2 p-2 border rounded-circle" [innerHTML]="r.urlImage" title="{{r.description}}"></span>
             </a>
             <span class="d-block m-2"><i class="fa fa-music"></i> Music</span>
             <span class="d-block m-2"><i class="fa fa-book"></i> Lecture</span>
@@ -48,7 +53,8 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-2"><a routerLink="/"> &copy;{{pat_date_creation}} - {{date |date:'yyyy'}} PAT</a></div>
         <div class="col-sm-2 border-start text-center"><a routerLink="/mentions-legales">Mentions légales</a></div>
-        <div class="col-sm-2 border-start text-center"><a routerLink="/tous-droits-reserves">Tous droits réservés</a></div>
+        <div class="col-sm-2 border-start text-center"><a routerLink="/tous-droits-reserves">Tous droits réservés</a>
+        </div>
         <div class="col-sm-3"></div>
     </div>
 </div>
