@@ -67,4 +67,6 @@ export interface AccueilModel {
     emblemeMemorialSousTitre: string;
 
     crucifixTexte: string;
+// Histoire du Pasteur
+    histoirePasteur: string;
 }

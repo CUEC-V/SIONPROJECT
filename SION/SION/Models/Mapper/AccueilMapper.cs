@@ -40,6 +40,7 @@ namespace SION.Models
                 EmblemeMemorialTitre = accueil.EmblemeMemorialTitre,
                 EmblemeMemorialSousTitre = accueil.EmblemeMemorialSousTitre,
                 CrucifixTexte = accueil.CrucifixTexte,
+                HistoirePasteur = accueil.HistoirePasteur,
                 ReseauxSociauxes = accueil.ReseauxSociauxes.ToList(),
                 MenuThematiques = accueil.MenuThematiques.ToList(),
             };
@@ -80,6 +81,7 @@ namespace SION.Models
                 RessourceSousTitre = accueil.RessourceSousTitre,
                 EmblemeMemorialTitre = accueil.EmblemeMemorialTitre,
                 CrucifixTexte = accueil.CrucifixTexte,
+                HistoirePasteur = accueil.HistoirePasteur,
                 EmblemeMemorialSousTitre = accueil.EmblemeMemorialSousTitre,
             };
         }
@@ -119,6 +121,7 @@ namespace SION.Models
                 RessourceSousTitre = accueil.RessourceSousTitre,
                 EmblemeMemorialTitre = accueil.EmblemeMemorialTitre,
                 CrucifixTexte = accueil.CrucifixTexte,
+                HistoirePasteur = accueil.HistoirePasteur,
                 EmblemeMemorialSousTitre = accueil.EmblemeMemorialSousTitre,
                 ReseauxSociauxes = accueil.ReseauxSociauxes.ToList(),
                 MenuThematiques = accueil.MenuThematiques.ToList(),

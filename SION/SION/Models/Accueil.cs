@@ -95,6 +95,12 @@ namespace SION.Models
 
         #endregion
 
+        #region : Histoire du Pasteur
+
+        [DataType(DataType.Html)]
+        public string? HistoirePasteur { get; set; }
+
+        #endregion
         public virtual ICollection<ReseauxSociaux> ReseauxSociauxes { get; set; }
         public virtual ICollection<MenuThematique> MenuThematiques { get; set; }
     }
