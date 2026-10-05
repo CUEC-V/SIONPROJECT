@@ -4,14 +4,13 @@
 
 <form [formGroup]="accueilFormGroup" (ngSubmit)="onSubmit()">
     <h4 (click)="toggle('I')">{{information}}</h4>
-    <fieldset  *ngIf="isIinformation" class="m-2">
+    <fieldset *ngIf="isIinformation" class="m-2">
         <div class="formGroup">
             <input type="hidden" formControlName="id" class="form-control" />
             <div class="form-group">
                 <label for="nomEglise" class="control-label m-1">Nom de l'église</label>
                 <input formControlName="nomEglise" class="form-control" />
-                <span *ngIf="accueilFormGroup.get('nomEglise')?.invalid"
-                    class="text-danger">{{nomEgliseMessage}}</span>
+                <span *ngIf="accueilFormGroup.get('nomEglise')?.invalid" class="text-danger">{{nomEgliseMessage}}</span>
             </div>
 
             <div class="form-group">
@@ -38,8 +37,7 @@
             <div class="form-group">
                 <label for="imageOffmann" class="control-label m-1">Image Offmann</label>
                 <input formControlName="imageOffmann" class="form-control" />
-                <span *ngIf="accueilFormGroup.get('imageOffmann')?.invalid"
-                    class="text-danger">{{imageOffmann}}</span>
+                <span *ngIf="accueilFormGroup.get('imageOffmann')?.invalid" class="text-danger">{{imageOffmann}}</span>
             </div>
 
             <div class="form-group">
@@ -59,8 +57,7 @@
             <div class="form-group">
                 <label for="imagePasteur" class="control-label m-1">Image du pasteur</label>
                 <input formControlName="imagePasteur" class="form-control" />
-                <span *ngIf="accueilFormGroup.get('imagePasteur')?.invalid"
-                    class="text-danger">{{imagePasteur}}</span>
+                <span *ngIf="accueilFormGroup.get('imagePasteur')?.invalid" class="text-danger">{{imagePasteur}}</span>
             </div>
 
             <div class="form-group">
@@ -77,44 +74,39 @@
         <div class="form-group">
             <label for="texteHaut" class="control-label m-1">Texte Haut</label>
             <input formControlName="texteHaut" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('texteHaut')?.invalid"
-                class="text-danger">{{texteHaut}}</span>
+            <span *ngIf="accueilFormGroup.get('texteHaut')?.invalid" class="text-danger">{{texteHaut}}</span>
         </div>
 
         <div class="form-group">
             <label for="video" class="control-label m-1">Vidéo</label>
             <input formControlName="video" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('video')?.invalid"
-                class="text-danger">{{video}}</span>
+            <span *ngIf="accueilFormGroup.get('video')?.invalid" class="text-danger">{{video}}</span>
         </div>
 
         <div class="form-group">
             <label for="textBas" class="control-label m-1">Texte Bas</label>
             <input formControlName="textBas" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('textBas')?.invalid"
-                class="text-danger">{{textBas}}</span>
+            <span *ngIf="accueilFormGroup.get('textBas')?.invalid" class="text-danger">{{textBas}}</span>
         </div>
 
     </fieldset>
-  <!--========================================================================================================-->
+    <!--========================================================================================================-->
     <h4 (click)="toggle('IA')">{{imageAigle}}</h4>
     <fieldset *ngIf="isImageAigle" class="m-2">
         <div class="form-group">
             <label for="image" class="control-label m-1">Image de l'aigle</label>
             <input formControlName="image" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('image')?.invalid"
-                class="text-danger">{{image}}</span>
+            <span *ngIf="accueilFormGroup.get('image')?.invalid" class="text-danger">{{image}}</span>
         </div>
 
         <div class="form-group">
             <label for="texteProphete" class="control-label m-1">Texte prophète</label>
             <input formControlName="texteProphete" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('texteProphete')?.invalid"
-                class="text-danger">{{texteProphete}}</span>
+            <span *ngIf="accueilFormGroup.get('texteProphete')?.invalid" class="text-danger">{{texteProphete}}</span>
         </div>
 
     </fieldset>
-  <!--========================================================================================================-->
+    <!--========================================================================================================-->
     <h4 (click)="toggle('A')">{{adresse}}</h4>
     <fieldset *ngIf="isAdresse" class="m-2">
         <div class="form-group">
@@ -139,7 +131,7 @@
         </div>
 
     </fieldset>
-      <!--========================================================================================================-->
+    <!--========================================================================================================-->
     <h4 (click)="toggle('HO')">{{horairesOuverture}}</h4>
     <fieldset *ngIf="isHorairesOuverture" class="m-2">
         <div class="form-group">
@@ -177,76 +169,80 @@
         <div class="form-group">
             <label for="ordreEglise1" class="control-label m-1">Ordre de l'église 1</label>
             <input formControlName="ordreEglise1" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('ordreEglise1')?.invalid"
-                class="text-danger">Ordre de l'église 1</span>
+            <span *ngIf="accueilFormGroup.get('ordreEglise1')?.invalid" class="text-danger">Ordre de l'église 1</span>
         </div>
 
         <div class="form-group">
             <label for="ordreEglise2" class="control-label m-1">Ordre de l'église 2</label>
             <input formControlName="ordreEglise2" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('ordreEglise2')?.invalid"
-                class="text-danger">Ordre de l'église 2</span>
+            <span *ngIf="accueilFormGroup.get('ordreEglise2')?.invalid" class="text-danger">Ordre de l'église 2</span>
         </div>
 
         <div class="form-group">
             <label for="ordreEglise3" class="control-label m-1">Ordre de l'église 3</label>
             <input formControlName="ordreEglise3" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('ordreEglise3')?.invalid"
-                class="text-danger">Ordre de l'église 3</span>
+            <span *ngIf="accueilFormGroup.get('ordreEglise3')?.invalid" class="text-danger">Ordre de l'église 3</span>
         </div>
 
         <div class="form-group">
             <label for="ordreEgliseTitre" class="control-label m-1">ordre église titre</label>
             <input formControlName="ordreEgliseTitre" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('ordreEgliseTitre')?.invalid"
-                class="text-danger">Ordre église titre</span>
-        </div>    
-        
+            <span *ngIf="accueilFormGroup.get('ordreEgliseTitre')?.invalid" class="text-danger">Ordre église
+                titre</span>
+        </div>
+
         <div class="form-group">
             <label for="ordreEgliseSousTitre" class="control-label m-1">ordre église sous titre</label>
             <input formControlName="ordreEgliseSousTitre" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('ordreEgliseSousTitre')?.invalid"
-                class="text-danger">Ordre église sous titre</span>
-        </div> 
-        
+            <span *ngIf="accueilFormGroup.get('ordreEgliseSousTitre')?.invalid" class="text-danger">Ordre église sous
+                titre</span>
+        </div>
+
 
         <div class="form-group">
             <label for="ressourceTitre" class="control-label m-1">Ressource titre</label>
             <input formControlName="ressourceTitre" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('ressourceTitre')?.invalid"
-                class="text-danger">Ressource Titre</span>
+            <span *ngIf="accueilFormGroup.get('ressourceTitre')?.invalid" class="text-danger">Ressource Titre</span>
         </div>
 
         <div class="form-group">
             <label for="ressourceSousTitre" class="control-label m-1">Ressource sous titre</label>
             <input formControlName="ressourceSousTitre" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('ressourceSousTitre')?.invalid"
-                class="text-danger">Ressource sous titre</span>
+            <span *ngIf="accueilFormGroup.get('ressourceSousTitre')?.invalid" class="text-danger">Ressource sous
+                titre</span>
         </div>
 
         <div class="form-group">
             <label for="emblemeMemorialTitre" class="control-label m-1">Emblème memorial titre</label>
             <input formControlName="emblemeMemorialTitre" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('emblemeMemorialTitre')?.invalid"
-                class="text-danger">Embleme Memorial Titre</span>
+            <span *ngIf="accueilFormGroup.get('emblemeMemorialTitre')?.invalid" class="text-danger">Embleme Memorial
+                Titre</span>
         </div>
 
         <div class="form-group">
             <label for="emblemeMemorialSousTitre" class="control-label m-1">Embleme mémorial sous-titre</label>
             <input formControlName="emblemeMemorialSousTitre" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('emblemeMemorialSousTitre')?.invalid"
-                class="text-danger">Embleme Memorial Sous Titre</span>
+            <span *ngIf="accueilFormGroup.get('emblemeMemorialSousTitre')?.invalid" class="text-danger">Embleme Memorial
+                Sous Titre</span>
         </div>
 
         <div class="form-group">
             <label for="crucifixTexte" class="control-label m-1">Crucifix texte</label>
             <input formControlName="crucifixTexte" class="form-control" />
-            <span *ngIf="accueilFormGroup.get('crucifixTexte')?.invalid"
-                class="text-danger">Crucifix Texte</span>
+            <span *ngIf="accueilFormGroup.get('crucifixTexte')?.invalid" class="text-danger">Crucifix Texte</span>
         </div>
 
     </fieldset>
 
+    <h4 (click)="toggle('HP')">{{histoirePasteur}}</h4>
+    <fieldset *ngIf="isHistoirePasteur" class="m-2">
+        <div class="form-group">
+            <label for="histoirePasteur" class="control-label m-1">Histoire du Pasteur</label>
+            <input formControlName="histoirePasteur" class="form-control" />
+            <span *ngIf="accueilFormGroup.get('histoirePasteur')?.invalid" class="text-danger">Histoire du
+                Pasteur</span>
+        </div>
+    </fieldset>
     <div class="d-flex justify-content-center">
         <button class="bnt bnt-primary" type="submit" [disabled]="!accueilFormGroup.valid">Valider</button>
     </div>

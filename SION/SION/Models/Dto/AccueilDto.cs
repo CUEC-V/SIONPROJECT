@@ -1,4 +1,6 @@
-﻿namespace SION.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SION.Models
 {
     public class AccueilDto
     {
@@ -88,6 +90,12 @@
 
         #endregion
 
+        #region : Histoire du Pasteur
+
+        [DataType(DataType.Html)]
+        public string? HistoirePasteur { get; set; }
+
+        #endregion
         public List<ReseauxSociaux> ReseauxSociauxes { get; set; } = new List<ReseauxSociaux>();
         public List<MenuThematique> MenuThematiques { get; set; } = new List<MenuThematique>();
     }

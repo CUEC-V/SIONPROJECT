@@ -29,7 +29,6 @@ export class AccueilComponent implements OnInit, Unsubscribable {
         this.accueils = a;
         this.accueil = this.accueils.length > 0 ? this.accueils[0] : this.accueil;
         this.videoId = this.accueil?.accueil ? this.accueil.accueil.video : Configuration.Youtube_VIDEO_PASTEUR;
-        console.log(this.videoId + 'to from');
 
         this.accueilService.getVideoByVideoIdForChanel(Configuration.Youtube_CHANNEL_NAME, this.videoId)
           .subscribe({
