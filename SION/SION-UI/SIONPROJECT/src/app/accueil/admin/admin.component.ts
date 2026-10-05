@@ -19,6 +19,7 @@ export class AdminComponent implements OnInit {
   isAdresse: boolean = false;
   isHorairesOuverture: boolean = false;
   isEmblemeRessourceOrdre: boolean = false;
+  isHistoirePasteur: boolean = false;
   isVideoPAT: boolean = false;
 
   information: string = '+ Informations générales';
@@ -27,6 +28,7 @@ export class AdminComponent implements OnInit {
   horairesOuverture: string = '+ Horaires d\'ouverture';
   emblemeRessourceOrdre: string = '+ Emblèmes et mémoriaux, ressources et ordre';
   videoPAT: string = '+ Vidéo de la Pierre Angulaire Tabernacle';
+  histoirePasteur: string = '+ Histoire du Pasteur';
 
   accueil!: AccueilModel;
 
@@ -64,7 +66,8 @@ export class AdminComponent implements OnInit {
     ressourceSousTitre: new FormControl(''),
     emblemeMemorialTitre: new FormControl(''),
     emblemeMemorialSousTitre: new FormControl(''),
-    crucifixTexte: new FormControl('')
+    crucifixTexte: new FormControl(''),
+    histoirePasteur :  new FormControl('')
   })
 
   nomEgliseMessage: string = Message.NomEglise;
@@ -122,6 +125,9 @@ export class AdminComponent implements OnInit {
     } else if (g === "EO") {
       this.isEmblemeRessourceOrdre = ! this.isEmblemeRessourceOrdre; 
       this.emblemeRessourceOrdre = !this.isEmblemeRessourceOrdre ? `+ ${this.emblemeRessourceOrdre.substring(1)} ` : `- ${this.emblemeRessourceOrdre.substring(1)} `;
+    } else if (g === "HP") {
+      this.isHistoirePasteur = ! this.isHistoirePasteur; 
+      this.histoirePasteur = !this.isHistoirePasteur ? `+ ${this.histoirePasteur.substring(1)} ` : `- ${this.histoirePasteur.substring(1)} `;
     }
   }
 
@@ -159,7 +165,8 @@ export class AdminComponent implements OnInit {
         ressourceSousTitre: this.accueil.ressourceSousTitre,
         emblemeMemorialTitre: this.accueil.emblemeMemorialTitre,
         emblemeMemorialSousTitre: this.accueil.emblemeMemorialSousTitre,
-        crucifixTexte :  this.accueil.crucifixTexte,      
+        crucifixTexte :  this.accueil.crucifixTexte,  
+        histoirePasteur:this.accueil.histoirePasteur    
       };
 
       this.accueilFormGroup.setValue(thisAccueil);
@@ -182,6 +189,8 @@ export class AdminComponent implements OnInit {
 
     } else {
       // Update data here !
+            console.log(acc);
+      alert('ooooooooooo');
       this.accueilService.modifier(acc.id, acc).subscribe({
         next: a => {
           console.log('Insertion réussie')

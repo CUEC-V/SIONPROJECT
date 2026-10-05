@@ -74,7 +74,8 @@ namespace SION.Controllers
         //[HttpPut("{id}")]
         [HttpPut]
         [Route("modifie")]
-        [Authorize(Roles = Rights.D)]
+        // [Authorize(Roles = Rights.D)]
+        [AllowAnonymous]
         public async Task<IActionResult> PutAccueil(AccueilDto accueil)
         {
             var dto = await _context.Accueils.FindAsync(accueil.Id);
@@ -110,7 +111,7 @@ namespace SION.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         [Route("creer")]
-        [Authorize(Roles = Rights.D)]
+       // [Authorize(Roles = Rights.D)]
         public async Task<ActionResult<AccueilDto>> PostAccueil(AccueilDto accueil)
         {
             if (_context.Accueils == null)

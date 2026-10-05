@@ -1,4 +1,6 @@
-﻿namespace SION.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace SION.Models
 {
     public class AccueilVm
     {
@@ -85,6 +87,13 @@
         public string EmblemeMemorialSousTitre { get; set; }
 
         public string CrucifixTexte { get; set; }
+        #endregion
+
+        #region : Histoire du Pasteur
+
+        [DataType(DataType.Html)]
+        public string? HistoirePasteur { get; set; }
+
         #endregion
     }
 }
